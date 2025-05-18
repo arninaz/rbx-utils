@@ -269,3 +269,5 @@ if CustomFunctionSupport then
 		delfile("Lavendel\\Plugins\\".. DeletePluginName.Text .. "")
 	end)
 end
+
+return PluginGUI

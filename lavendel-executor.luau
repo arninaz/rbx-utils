@@ -10,47 +10,50 @@
 -- Instances: 17 | Scripts: 1 | Modules: 6 | Tags: 0
 local G2L = {};
 
--- StarterGui.ScreenGui
+-- ServerStorage.main storage.ScreenGui
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
 
 
--- StarterGui.ScreenGui.LocalScript
+-- ServerStorage.main storage.ScreenGui.LocalScript
 G2L["2"] = Instance.new("LocalScript", G2L["1"]);
 
 
 
--- StarterGui.ScreenGui.LocalScript.h
+-- ServerStorage.main storage.ScreenGui.LocalScript.h
 G2L["3"] = Instance.new("ModuleScript", G2L["2"]);
 G2L["3"]["Name"] = [[h]];
 
 
--- StarterGui.ScreenGui.LocalScript.h.lexer
+-- ServerStorage.main storage.ScreenGui.LocalScript.h.lexer
 G2L["4"] = Instance.new("ModuleScript", G2L["3"]);
 G2L["4"]["Name"] = [[lexer]];
 
 
--- StarterGui.ScreenGui.LocalScript.h.lexer.language
+-- ServerStorage.main storage.ScreenGui.LocalScript.h.lexer.language
 G2L["5"] = Instance.new("ModuleScript", G2L["4"]);
 G2L["5"]["Name"] = [[language]];
 
 
--- StarterGui.ScreenGui.LocalScript.h.types
+-- ServerStorage.main storage.ScreenGui.LocalScript.h.types
 G2L["6"] = Instance.new("ModuleScript", G2L["3"]);
 G2L["6"]["Name"] = [[types]];
 
 
--- StarterGui.ScreenGui.LocalScript.h.utility
+-- ServerStorage.main storage.ScreenGui.LocalScript.h.utility
 G2L["7"] = Instance.new("ModuleScript", G2L["3"]);
 G2L["7"]["Name"] = [[utility]];
 
 
--- StarterGui.ScreenGui.LocalScript.h.theme
+-- ServerStorage.main storage.ScreenGui.LocalScript.h.theme
 G2L["8"] = Instance.new("ModuleScript", G2L["3"]);
 G2L["8"]["Name"] = [[theme]];
 
 
--- StarterGui.ScreenGui.Main
+-- ServerStorage.main storage.ScreenGui.Main
 G2L["9"] = Instance.new("Frame", G2L["1"]);
 G2L["9"]["BorderSizePixel"] = 0;
 G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -61,7 +64,7 @@ G2L["9"]["Name"] = [[Main]];
 G2L["9"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.ScreenGui.Main.s1
+-- ServerStorage.main storage.ScreenGui.Main.s1
 G2L["a"] = Instance.new("ImageLabel", G2L["9"]);
 G2L["a"]["ZIndex"] = -15;
 G2L["a"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
@@ -78,7 +81,7 @@ G2L["a"]["Name"] = [[s1]];
 G2L["a"]["Position"] = UDim2.new(0.49915, 0, 0.49808, 0);
 
 
--- StarterGui.ScreenGui.Main.s2
+-- ServerStorage.main storage.ScreenGui.Main.s2
 G2L["b"] = Instance.new("ImageLabel", G2L["9"]);
 G2L["b"]["ZIndex"] = -15;
 G2L["b"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
@@ -95,7 +98,7 @@ G2L["b"]["Name"] = [[s2]];
 G2L["b"]["Position"] = UDim2.new(0.49915, 0, 0.49808, 0);
 
 
--- StarterGui.ScreenGui.Main.s3
+-- ServerStorage.main storage.ScreenGui.Main.s3
 G2L["c"] = Instance.new("ImageLabel", G2L["9"]);
 G2L["c"]["ZIndex"] = -15;
 G2L["c"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
@@ -112,7 +115,7 @@ G2L["c"]["Name"] = [[s3]];
 G2L["c"]["Position"] = UDim2.new(0.49915, 0, 0.49808, 0);
 
 
--- StarterGui.ScreenGui.Main.Base
+-- ServerStorage.main storage.ScreenGui.Main.Base
 G2L["d"] = Instance.new("ImageLabel", G2L["9"]);
 G2L["d"]["BorderSizePixel"] = 0;
 G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -124,7 +127,7 @@ G2L["d"]["Name"] = [[Base]];
 G2L["d"]["Position"] = UDim2.new(-0, 0, 0, 0);
 
 
--- StarterGui.ScreenGui.Main.Base.TextLabel
+-- ServerStorage.main storage.ScreenGui.Main.Base.TextLabel
 G2L["e"] = Instance.new("TextLabel", G2L["d"]);
 G2L["e"]["BorderSizePixel"] = 0;
 G2L["e"]["TextSize"] = 20;
@@ -138,7 +141,7 @@ G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e"]["Text"] = [[Lavendel's Executor]];
 
 
--- StarterGui.ScreenGui.Main.Base.Input
+-- ServerStorage.main storage.ScreenGui.Main.Base.Input
 G2L["f"] = Instance.new("TextBox", G2L["d"]);
 G2L["f"]["Name"] = [[Input]];
 G2L["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
@@ -157,7 +160,7 @@ G2L["f"]["Text"] = [[]];
 G2L["f"]["BackgroundTransparency"] = 0.1;
 
 
--- StarterGui.ScreenGui.Main.Base.TextButton
+-- ServerStorage.main storage.ScreenGui.Main.Base.TextButton
 G2L["10"] = Instance.new("TextButton", G2L["d"]);
 G2L["10"]["TextWrapped"] = true;
 G2L["10"]["BorderSizePixel"] = 0;
@@ -172,9 +175,9 @@ G2L["10"]["Text"] = [[Execute]];
 G2L["10"]["Position"] = UDim2.new(0.18827, 0, 0.885, 0);
 
 
--- StarterGui.ScreenGui.Main.UIDragDetector
-G2L["11"] = Instance.new("UIDragDetector", G2L["9"]);
-
+-- ServerStorage.main storage.ScreenGui.Main.Base.UIDragDetector
+G2L["11"] = Instance.new("UIDragDetector", G2L["d"]);
+-- [ERROR] cannot convert BoundingUI, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 
 -- Require G2L wrapper
@@ -1581,7 +1584,7 @@ return Theme
 
 end;
 };
--- StarterGui.ScreenGui.LocalScript
+-- ServerStorage.main storage.ScreenGui.LocalScript
 local function C_2()
 local script = G2L["2"];
 	local h = require(script.h)

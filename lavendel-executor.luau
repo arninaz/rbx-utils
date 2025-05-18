@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 17 | Scripts: 1 | Modules: 6 | Tags: 0
+-- Instances: 14 | Scripts: 1 | Modules: 6 | Tags: 0
 local G2L = {};
 
 -- ServerStorage.main storage.ScreenGui
@@ -64,119 +64,68 @@ G2L["9"]["Name"] = [[Main]];
 G2L["9"]["BackgroundTransparency"] = 1;
 
 
--- ServerStorage.main storage.ScreenGui.Main.s1
-G2L["a"] = Instance.new("ImageLabel", G2L["9"]);
-G2L["a"]["ZIndex"] = -15;
-G2L["a"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
-G2L["a"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["a"]["ImageTransparency"] = 0.81;
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["a"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["a"]["Image"] = [[rbxassetid://1316045217]];
-G2L["a"]["Size"] = UDim2.new(0, 337, 0, 201);
-G2L["a"]["BackgroundTransparency"] = 1;
-G2L["a"]["LayoutOrder"] = -1;
-G2L["a"]["Name"] = [[s1]];
-G2L["a"]["Position"] = UDim2.new(0.49915, 0, 0.49808, 0);
-
-
--- ServerStorage.main storage.ScreenGui.Main.s2
-G2L["b"] = Instance.new("ImageLabel", G2L["9"]);
-G2L["b"]["ZIndex"] = -15;
-G2L["b"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
-G2L["b"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["b"]["ImageTransparency"] = 0.81;
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["b"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["b"]["Image"] = [[rbxassetid://1316045217]];
-G2L["b"]["Size"] = UDim2.new(0, 337, 0, 201);
-G2L["b"]["BackgroundTransparency"] = 1;
-G2L["b"]["LayoutOrder"] = -1;
-G2L["b"]["Name"] = [[s2]];
-G2L["b"]["Position"] = UDim2.new(0.49915, 0, 0.49808, 0);
-
-
--- ServerStorage.main storage.ScreenGui.Main.s3
-G2L["c"] = Instance.new("ImageLabel", G2L["9"]);
-G2L["c"]["ZIndex"] = -15;
-G2L["c"]["SliceCenter"] = Rect.new(10, 10, 118, 118);
-G2L["c"]["ScaleType"] = Enum.ScaleType.Slice;
-G2L["c"]["ImageTransparency"] = 0.81;
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["c"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["c"]["Image"] = [[rbxassetid://1316045217]];
-G2L["c"]["Size"] = UDim2.new(0, 337, 0, 201);
-G2L["c"]["BackgroundTransparency"] = 1;
-G2L["c"]["LayoutOrder"] = -1;
-G2L["c"]["Name"] = [[s3]];
-G2L["c"]["Position"] = UDim2.new(0.49915, 0, 0.49808, 0);
-
-
 -- ServerStorage.main storage.ScreenGui.Main.Base
-G2L["d"] = Instance.new("ImageLabel", G2L["9"]);
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"] = Instance.new("ImageLabel", G2L["9"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 -- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["d"]["Image"] = [[rbxassetid://139687414325328]];
-G2L["d"]["Size"] = UDim2.new(0, 324, 0, 186);
-G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["Name"] = [[Base]];
-G2L["d"]["Position"] = UDim2.new(-0, 0, 0, 0);
+G2L["a"]["Image"] = [[rbxassetid://139687414325328]];
+G2L["a"]["Size"] = UDim2.new(0, 324, 0, 186);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Name"] = [[Base]];
+G2L["a"]["Position"] = UDim2.new(-0, 0, 0, 0);
 
 
 -- ServerStorage.main storage.ScreenGui.Main.Base.TextLabel
-G2L["e"] = Instance.new("TextLabel", G2L["d"]);
-G2L["e"]["BorderSizePixel"] = 0;
-G2L["e"]["TextSize"] = 20;
-G2L["e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e"]["BackgroundTransparency"] = 1;
-G2L["e"]["Size"] = UDim2.new(0, 324, 0, 16);
-G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e"]["Text"] = [[Lavendel's Executor]];
+G2L["b"] = Instance.new("TextLabel", G2L["a"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextSize"] = 20;
+G2L["b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Size"] = UDim2.new(0, 324, 0, 16);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[Lavendel's Executor]];
 
 
 -- ServerStorage.main storage.ScreenGui.Main.Base.Input
-G2L["f"] = Instance.new("TextBox", G2L["d"]);
-G2L["f"]["Name"] = [[Input]];
-G2L["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["f"]["PlaceholderColor3"] = Color3.fromRGB(99, 99, 99);
-G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["TextSize"] = 14;
-G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(18, 18, 18);
-G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f"]["PlaceholderText"] = [[-- code]];
-G2L["f"]["Size"] = UDim2.new(0, 324, 0, 138);
-G2L["f"]["Position"] = UDim2.new(0, 0, 0.11828, 0);
-G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["Text"] = [[]];
-G2L["f"]["BackgroundTransparency"] = 0.1;
+G2L["c"] = Instance.new("TextBox", G2L["a"]);
+G2L["c"]["Name"] = [[Input]];
+G2L["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c"]["PlaceholderColor3"] = Color3.fromRGB(99, 99, 99);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextSize"] = 14;
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(18, 18, 18);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["PlaceholderText"] = [[-- code]];
+G2L["c"]["Size"] = UDim2.new(0, 324, 0, 138);
+G2L["c"]["Position"] = UDim2.new(0, 0, 0.11828, 0);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[]];
+G2L["c"]["BackgroundTransparency"] = 0.1;
 
 
 -- ServerStorage.main storage.ScreenGui.Main.Base.TextButton
-G2L["10"] = Instance.new("TextButton", G2L["d"]);
-G2L["10"]["TextWrapped"] = true;
-G2L["10"]["BorderSizePixel"] = 0;
-G2L["10"]["TextSize"] = 14;
-G2L["10"]["TextScaled"] = true;
-G2L["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["10"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
-G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["10"]["Size"] = UDim2.new(0, 200, 0, 18);
-G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10"]["Text"] = [[Execute]];
-G2L["10"]["Position"] = UDim2.new(0.18827, 0, 0.885, 0);
+G2L["d"] = Instance.new("TextButton", G2L["a"]);
+G2L["d"]["TextWrapped"] = true;
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["TextScaled"] = true;
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["Size"] = UDim2.new(0, 200, 0, 18);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[Execute]];
+G2L["d"]["Position"] = UDim2.new(0.18827, 0, 0.885, 0);
 
 
 -- ServerStorage.main storage.ScreenGui.Main.Base.UIDragDetector
-G2L["11"] = Instance.new("UIDragDetector", G2L["d"]);
+G2L["e"] = Instance.new("UIDragDetector", G2L["a"]);
 -- [ERROR] cannot convert BoundingUI, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 

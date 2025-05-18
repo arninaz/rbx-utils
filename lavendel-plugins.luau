@@ -1,3 +1,5 @@
+local CustomFunctionSupport = isfile and isfolder and writefile and readfile
+
 local PluginGUI = Instance.new("ScreenGui")
 local PluginFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")

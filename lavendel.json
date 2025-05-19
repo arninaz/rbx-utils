@@ -29,6 +29,10 @@
         "MoonLight": {
             "Name": "Moonlight Backdoor Scanner",
             "URL": "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/moonlight.lua"
+        },
+        "GAG": {
+            "Name": "Grow a Garden",
+            "URL": "https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Loader/LoaderV1.lua"
         }
     },
 

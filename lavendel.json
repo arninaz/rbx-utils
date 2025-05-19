@@ -11,6 +11,14 @@
         "QCMD": {
             "Name" : "Quirky CMD",
             "URL": "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/qCMD.lua"
+        },
+        "AE": {
+            "Name" : "Admin Enabled",
+            "URL": "https://raw.githubusercontent.com/FilteringEnabled/FE/refs/heads/main/AdminEnabled"
+        },
+        "RA": {
+            "Name" : "Rockys Admin",
+            "URL": "https://raw.githubusercontent.com/FilteringEnabled/FE/refs/heads/main/rockysadmin"
         }
     },
     "Scripts": {

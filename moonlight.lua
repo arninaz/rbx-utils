@@ -11,10 +11,10 @@
 local G2L = {};
 
 -- StarterGui.Moonlight
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
 G2L["1"]["Name"] = [[Moonlight]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
+G2L["1"]["ResetOnSpawn"] = false
 
 -- StarterGui.Moonlight.Moonlight
 G2L["2"] = Instance.new("ImageLabel", G2L["1"]);

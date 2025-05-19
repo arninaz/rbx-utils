@@ -62,21 +62,9 @@ G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["Name"] = [[Main]];
 G2L["9"]["BackgroundTransparency"] = 0;
 
--- ServerStorage.main storage.ScreenGui.Main.Base
-G2L["a"] = Instance.new("ImageLabel", G2L["9"]);
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["a"]["Image"] = [[rbxassetid://139687414325328]];
-G2L["a"]["Size"] = UDim2.new(0, 324, 0, 186);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Name"] = [[Base]];
-G2L["a"]["BackgroundTransparency"] = 1
-G2L["a"]["Position"] = UDim2.new(-0, 0, 0, 0);
-
 
 -- ServerStorage.main storage.ScreenGui.Main.Base.TextLabel
-G2L["b"] = Instance.new("TextLabel", G2L["a"]);
+G2L["b"] = Instance.new("TextLabel", G2L["9"]);
 G2L["b"]["BorderSizePixel"] = 0;
 G2L["b"]["TextSize"] = 20;
 G2L["b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
@@ -90,7 +78,7 @@ G2L["b"]["Text"] = [[Lavendel's Executor]];
 
 
 -- ServerStorage.main storage.ScreenGui.Main.Base.Input
-G2L["c"] = Instance.new("TextBox", G2L["a"]);
+G2L["c"] = Instance.new("TextBox", G2L["9"]);
 G2L["c"]["Name"] = [[Input]];
 G2L["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["c"]["PlaceholderColor3"] = Color3.fromRGB(99, 99, 99);
@@ -109,7 +97,7 @@ G2L["c"]["BackgroundTransparency"] = 0.1;
 
 
 -- ServerStorage.main storage.ScreenGui.Main.Base.TextButton
-G2L["d"] = Instance.new("TextButton", G2L["a"]);
+G2L["d"] = Instance.new("TextButton", G2L["9"]);
 G2L["d"]["TextWrapped"] = true;
 G2L["d"]["BorderSizePixel"] = 0;
 G2L["d"]["TextSize"] = 14;
@@ -125,7 +113,7 @@ G2L["d"]["Position"] = UDim2.new(0.18827, 0, 0.885, 0);
 
 
 -- ServerStorage.main storage.ScreenGui.Main.Base.UIDragDetector
-G2L["e"] = Instance.new("UIDragDetector", G2L["a"]);
+G2L["e"] = Instance.new("UIDragDetector", G2L["9"]);
 -- [ERROR] cannot convert BoundingUI, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
 
 

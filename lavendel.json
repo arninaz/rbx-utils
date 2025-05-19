@@ -2,23 +2,23 @@
     "Admins": {
         "IY": {
             "Name": "Infinite Yield",
-            "URL": "EdgeIY/infiniteyield/master/source"
+            "URL": "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
         },
         "NA": {
             "Name": "Nameless Admin",
-            "URL": "FilteringEnabled/NamelessAdmin/main/Source"
+            "URL": "https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"
         },
         "QCMD": {
             "Name" : "Quirky CMD",
-            "URL": "veryz-sillyz-boyz/rbx-utils/refs/heads/main/quirky-cmd-reupload"
+            "URL": "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/quirky-cmd-reupload"
         }
     },
     "Scripts": {
         "HatHub" : {
             "Name": "HatHub",
-            "URL": "inkdupe/hat-scripts/refs/heads/main/updatedhathub.lua"
+            "URL": "https://raw.githubusercontent.com/inkdupe/hat-scripts/refs/heads/main/updatedhathub.lua"
         }
     },
 
-    "Executor": "veryz-sillyz-boyz/rbx-utils/refs/heads/main/lavendel-executor.luau"
+    "Executor": "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/lavendel-executor.luau"
 }

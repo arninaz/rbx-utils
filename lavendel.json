@@ -13,6 +13,12 @@
             "URL": "veryz-sillyz-boyz/rbx-utils/refs/heads/main/quirky-cmd-reupload"
         }
     },
+    "Scripts": {
+        "HatHub" : {
+            "Name": "HatHub",
+            "URL": "inkdupe/hat-scripts/refs/heads/main/updatedhathub.lua"
+        }
+    },
 
     "Executor": "veryz-sillyz-boyz/rbx-utils/refs/heads/main/lavendel-executor.luau"
 }

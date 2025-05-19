@@ -1,10 +1,14 @@
 {
-    "IY": {
-        "Name": "Infinite Yield",
-        "URL": "EdgeIY/infiniteyield/master/source"
+    "Admins": {
+        "IY": {
+            "Name": "Infinite Yield",
+            "URL": "EdgeIY/infiniteyield/master/source"
+        },
+        "NA": {
+            "Name": "Nameless Admin",
+            "URL": "FilteringEnabled/NamelessAdmin/main/Source"
+        }
     },
-    "NA": {
-        "Name": "Nameless Admin",
-        "URL": "FilteringEnabled/NamelessAdmin/main/Source"
-    }
+
+    "Executor": "veryz-sillyz-boyz/rbx-utils/refs/heads/main/lavendel-executor.luau"
 }

@@ -1527,10 +1527,9 @@ local script = G2L["2"];
 	local ui = script.Parent
 
 	local main = ui:FindFirstChild("Main")
-	local base = main:FindFirstChild("Base")
 	
-	local input = base:FindFirstChild("Input")
-	local btn = base:FindFirstChild("Execute")
+	local input = main:FindFirstChild("Input")
+	local btn = main:FindFirstChild("Execute")
 
 	local highlighter = require(script:FindFirstChild("Highlighter"))
 

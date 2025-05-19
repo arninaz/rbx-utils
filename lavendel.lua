@@ -1,0 +1,46 @@
+return {
+    Admins = {
+        IY = {
+            Name = "Infinite Yield",
+            URL = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
+        },
+        NA = {
+            Name = "Nameless Admin",
+            URL = "https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"
+        },
+        QCMD = {
+            Name = "Quirky CMD",
+            URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/qCMD.lua"
+        },
+        AE = {
+            Name = "Admin Enabled",
+            URL = "https://raw.githubusercontent.com/FilteringEnabled/FE/refs/heads/main/AdminEnabled"
+        },
+        RA = {
+            Name = "Rockys Admin",
+            URL = "https://raw.githubusercontent.com/FilteringEnabled/FE/refs/heads/main/rockysadmin"
+        }
+    },
+    Scripts = {
+        HatHub = {
+            Name = "HatHub",
+            URL = "https://raw.githubusercontent.com/inkdupe/hat-scripts/refs/heads/main/updatedhathub.lua"
+        },
+        MoonLight = {
+            Name = "Moonlight Backdoor Scanner",
+            URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/moonlight.lua"
+        },
+        GAG = {
+            Name = "Grow a Garden",
+            URL = "https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Garden/Garden-V1.lua"
+        },
+        DEX = {
+            Name = "Dex Explorer",
+            URL = "https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"
+        },
+        EXE = {
+            Name = "Executor",
+            URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/lavendel-executor.luau"
+        }
+    }
+}

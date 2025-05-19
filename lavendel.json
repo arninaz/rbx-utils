@@ -33,6 +33,10 @@
         "GAG": {
             "Name": "Grow a Garden",
             "URL": "https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Garden/Garden-V1.lua"
+        },
+        "DEX": {
+            "Name": "Dex Explorer",
+            "URL": "https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"
         }
     },
 

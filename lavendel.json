@@ -14,9 +14,13 @@
         }
     },
     "Scripts": {
-        "HatHub" : {
+        "HatHub": {
             "Name": "HatHub",
             "URL": "https://raw.githubusercontent.com/inkdupe/hat-scripts/refs/heads/main/updatedhathub.lua"
+        },
+        "MoonLight": {
+            "Name": "Moonlight Backdoor Scanner",
+            "URL": "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/moonlight.lua"
         }
     },
 

@@ -7,6 +7,10 @@
         "NA": {
             "Name": "Nameless Admin",
             "URL": "FilteringEnabled/NamelessAdmin/main/Source"
+        },
+        "QCMD": {
+            "Name" : "Quirky CMD",
+            "URL": "veryz-sillyz-boyz/rbx-utils/refs/heads/main/quirky-cmd-reupload"
         }
     },
 

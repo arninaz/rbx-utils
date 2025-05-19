@@ -1,0 +1,10 @@
+{
+    "IY": {
+        "Name": "Infinite Yield",
+        "URL": "EdgeIY/infiniteyield/master/source"
+    },
+    "NA": {
+        "Name": "Nameless Admin",
+        "URL": "FilteringEnabled/NamelessAdmin/main/Source"
+    }
+}

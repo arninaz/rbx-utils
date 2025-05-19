@@ -74,7 +74,7 @@ G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b"]["BackgroundTransparency"] = 1;
 G2L["b"]["Size"] = UDim2.new(0, 324, 0, 16);
 G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Text"] = [[Lavendel's Executor]];
+G2L["b"]["Text"] = [[Executor]];
 
 
 -- ServerStorage.main storage.ScreenGui.Main.Base.Input

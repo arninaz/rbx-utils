@@ -22,10 +22,9 @@ G2L["1"]["ResetOnSpawn"] = false;
 G2L["2"] = Instance.new("LocalScript", G2L["1"]);
 
 
-
 -- ServerStorage.main storage.ScreenGui.LocalScript.h
 G2L["3"] = Instance.new("ModuleScript", G2L["2"]);
-G2L["3"]["Name"] = [[h]];
+G2L["3"]["Name"] = [[Highlighter]];
 
 
 -- ServerStorage.main storage.ScreenGui.LocalScript.h.lexer
@@ -56,13 +55,12 @@ G2L["8"]["Name"] = [[theme]];
 -- ServerStorage.main storage.ScreenGui.Main
 G2L["9"] = Instance.new("Frame", G2L["1"]);
 G2L["9"]["BorderSizePixel"] = 0;
-G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(30,30,30);
 G2L["9"]["Size"] = UDim2.new(0, 324, 0, 186);
 G2L["9"]["Position"] = UDim2.new(0.17173, 0, 0.24375, 0);
 G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["Name"] = [[Main]];
-G2L["9"]["BackgroundTransparency"] = 1;
-
+G2L["9"]["BackgroundTransparency"] = 0;
 
 -- ServerStorage.main storage.ScreenGui.Main.Base
 G2L["a"] = Instance.new("ImageLabel", G2L["9"]);
@@ -73,6 +71,7 @@ G2L["a"]["Image"] = [[rbxassetid://139687414325328]];
 G2L["a"]["Size"] = UDim2.new(0, 324, 0, 186);
 G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["a"]["Name"] = [[Base]];
+G2L["a"]["BackgroundTransparency"] = 1
 G2L["a"]["Position"] = UDim2.new(-0, 0, 0, 0);
 
 
@@ -121,6 +120,7 @@ G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], En
 G2L["d"]["Size"] = UDim2.new(0, 200, 0, 18);
 G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["d"]["Text"] = [[Execute]];
+G2L["d"]["Name"] = [[Execute]]
 G2L["d"]["Position"] = UDim2.new(0.18827, 0, 0.885, 0);
 
 
@@ -1536,18 +1536,25 @@ end;
 -- ServerStorage.main storage.ScreenGui.LocalScript
 local function C_2()
 local script = G2L["2"];
-	local h = require(script.h)
-	local input = script.Parent.Main.Base.Input
-	local btn = script.Parent.Main.Base.TextButton
+	local ui = script.Parent
+
+	local main = ui:FindFirstChild("Main")
+	local base = main:FindFirstChild("Base")
 	
+	local input = base:FindFirstChild("Input")
+	local btn = base:FindFirstChild("Execute")
+
+	local highlighter = require(script:FindFirstChild("Highlighter"))
+
 	btn.MouseButton1Click:Connect(function()
 		loadstring(input.Text)()
 	end)
 	
-	h.highlight({
+	highlighter.highlight({
 		textObject = input
 	})
 end;
+
 task.spawn(C_2);
 
 return G2L["1"], require;

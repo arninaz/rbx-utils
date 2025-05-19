@@ -10,7 +10,7 @@
         },
         "QCMD": {
             "Name" : "Quirky CMD",
-            "URL": "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/quirky-cmd-reupload.lua"
+            "URL": "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/qCMD.lua"
         }
     },
     "Scripts": {

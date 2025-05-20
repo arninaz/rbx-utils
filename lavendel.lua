@@ -41,6 +41,10 @@ return {
         EXE = {
             Name = "Executor",
             URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/lavendel-executor.luau"
+        },
+        PRA = {
+            Name = "Polaria",
+            URL = "https://pastefy.app/agqEB2qs/raw"
         }
     }
 }

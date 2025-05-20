@@ -36,7 +36,7 @@ return {
         },
         DEX = {
             Name = "Dex Explorer",
-            URL = "https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"
+            URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/dex.lua"
         },
         EXE = {
             Name = "Executor",

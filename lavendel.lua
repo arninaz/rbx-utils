@@ -35,10 +35,6 @@ return {
             URL = "https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Garden/Garden-V1.lua"
         },
         {
-            Name = "Dex Explorer",
-            URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/dex.lua"
-        },
-        {
             Name = "Executor",
             URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/lavendel-executor.luau"
         },

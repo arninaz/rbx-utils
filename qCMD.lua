@@ -1,173 +1,1813 @@
 -- THIS IS REUPLOADED TO FIT MY SCRIPTS STANDARDS, ALL CREDITS TO https://discord.gg/g94sqQC6N7
 
---{ QuirkyCMD made by quirky anime boy (smokedoutlocedout on discord) }--
--- ty Destiny for adding more exec support <3
--- Discord server for working games: https://discord.gg/aG6KdRje3x
-local cloneref = cloneref or function(a) return a end
-local coreGui = cloneref(game:GetService("CoreGui"))
-local players = cloneref(game:GetService("Players"))
-local localPlayer = players.LocalPlayer
-
-local function isElevatedStudioPlugin()
-    local s, r = pcall(function()
-        return coreGui:GetChildren()
-    end)
-    return s
-end
-
-local gethui = gethui or function()
-	local folder
-	if isElevatedStudioPlugin() then
-		if coreGui:WaitForChild("RobloxGui"):FindFirstChild(".__gethui") then
-			folder = coreGui:WaitForChild("RobloxGui"):FindFirstChild(".__gethui")
-		else
-			folder = Instance.new("Folder")
-			folder.Name = '.__gethui'
-			folder.Parent = coreGui:WaitForChild("RobloxGui")
-		end
-	else
-		folder = localPlayer:WaitForChild'PlayerGui'
-	end
-	return folder
-end
-
-local quirkycmd = Instance.new("ScreenGui", gethui())
-quirkycmd.Name = "quirkyCMD"
-quirkycmd.IgnoreGuiInset = true
-quirkycmd.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-quirkycmd.ResetOnSpawn = false
-quirkycmd.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-local remotepath = Instance.new("TextLabel")
-remotepath.Name = "remotepath"
-remotepath.Text = ""
-remotepath.TextColor3 = Color3.fromRGB(255, 255, 255)
-remotepath.TextScaled = true
-remotepath.TextSize = 14
-remotepath.TextTransparency = 0.6
-remotepath.TextWrapped = true
-remotepath.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-remotepath.BackgroundTransparency = 0.6
-remotepath.BorderColor3 = Color3.fromRGB(0, 0, 0)
-remotepath.BorderSizePixel = 0
-remotepath.Position = UDim2.fromScale(0.396, 0.249)
-remotepath.Size = UDim2.fromScale(0.208, 0.044)
-
-local uicorner = Instance.new("UICorner")
-uicorner.Name = "UICorner"
-uicorner.CornerRadius = UDim.new(0, 3)
-uicorner.Parent = remotepath
-
-remotepath.Parent = quirkycmd
-
-local cmdbox = Instance.new("TextBox")
-cmdbox.Name = "cmdBox"
-cmdbox.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
-cmdbox.PlaceholderText = "ERROR"
-cmdbox.Text = ""
-cmdbox.TextColor3 = Color3.fromRGB(200, 200, 200)
-cmdbox.TextScaled = true
-cmdbox.TextSize = 12
-cmdbox.TextTruncate = Enum.TextTruncate.AtEnd
-cmdbox.TextWrapped = true
-cmdbox.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-cmdbox.BorderColor3 = Color3.fromRGB(59, 59, 59)
-cmdbox.BorderSizePixel = 3
-cmdbox.Position = UDim2.fromScale(0.396, 0.25)
-cmdbox.Size = UDim2.fromScale(0.208, 0.0441)
-
-local uitextsizeconstraint = Instance.new("UITextSizeConstraint")
-uitextsizeconstraint.Name = "UITextSizeConstraint"
-uitextsizeconstraint.MaxTextSize = 18
-uitextsizeconstraint.Parent = cmdbox
-
-cmdbox.Parent = quirkycmd
-
-local mobileopen = Instance.new("TextButton")
-mobileopen.Name = "mobileOpen"
-mobileopen.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
-mobileopen.Text = "CMD"
-mobileopen.TextColor3 = Color3.fromRGB(200, 200, 200)
-mobileopen.TextScaled = true
-mobileopen.TextSize = 14
-mobileopen.TextWrapped = true
-mobileopen.AnchorPoint = Vector2.new(1, 0)
-mobileopen.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-mobileopen.BorderColor3 = Color3.fromRGB(0, 0, 0)
-mobileopen.BorderSizePixel = 0
-mobileopen.Position = UDim2.fromScale(1, 0.25)
-mobileopen.Size = UDim2.fromScale(0.0346, 0.0734)
-
-local uicorner1 = Instance.new("UICorner")
-uicorner1.Name = "UICorner"
-uicorner1.CornerRadius = UDim.new(0, 3)
-uicorner1.Parent = mobileopen
-
-mobileopen.Parent = quirkycmd
-
+local quirkyCMD = Instance.new("ScreenGui")
+local Unused = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UI = Instance.new("ImageLabel")
+local aa = Instance.new("ImageLabel")
+local LeftBar = Instance.new("Frame")
+local Logo = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local HomeFrame = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local Home = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local UIPadding = Instance.new("UIPadding")
+local TextLabel_4 = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local UIPadding_2 = Instance.new("UIPadding")
+local TextLabel_5 = Instance.new("TextLabel")
+local SettingsFrame = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local Frame_2 = Instance.new("Frame")
+local TextLabel_6 = Instance.new("TextLabel")
+local Toggle = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local Toggle_2 = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local TextButton = Instance.new("TextButton")
+local PlaySounds = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local UIPadding_3 = Instance.new("UIPadding")
+local UIStroke_3 = Instance.new("UIStroke")
+local SimpleUI = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local UIPadding_4 = Instance.new("UIPadding")
+local UIStroke_4 = Instance.new("UIStroke")
+local Toggle_3 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local Toggle_4 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local TextButton_2 = Instance.new("TextButton")
+local Toggle_5 = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local Toggle_6 = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local TextButton_3 = Instance.new("TextButton")
+local SimpleUI_2 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local UIPadding_5 = Instance.new("UIPadding")
+local UIStroke_5 = Instance.new("UIStroke")
+local Settings = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local Frame_3 = Instance.new("Frame")
+local Commands = Instance.new("TextButton")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local Frame_4 = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
 local cmds = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local UIGradient_3 = Instance.new("UIGradient")
+local Frame_5 = Instance.new("Frame")
+local TextLabel_7 = Instance.new("TextLabel")
+local cmdList = Instance.new("ScrollingFrame")
+local UICorner_17 = Instance.new("UICorner")
+local UIStroke_6 = Instance.new("UIStroke")
+local UIPadding_6 = Instance.new("UIPadding")
+local Home_2 = Instance.new("TextButton")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local Frame_6 = Instance.new("Frame")
+local UIStroke_7 = Instance.new("UIStroke")
+local UICorner_18 = Instance.new("UICorner")
+local CommandBar = Instance.new("Frame")
+local aa_2 = Instance.new("ImageLabel")
+local cmdBox = Instance.new("TextBox")
+local UICorner_19 = Instance.new("UICorner")
+local UIPadding_7 = Instance.new("UIPadding")
+local UIStroke_8 = Instance.new("UIStroke")
+local UIStroke_9 = Instance.new("UIStroke")
+local UICorner_20 = Instance.new("UICorner")
+local UIGradient_4 = Instance.new("UIGradient")
+local Autofill = Instance.new("Frame")
+local UIStroke_10 = Instance.new("UIStroke")
+local UIGradient_5 = Instance.new("UIGradient")
+local UICorner_21 = Instance.new("UICorner")
+local CommandDoom = Instance.new("ScrollingFrame")
+local UIStroke_11 = Instance.new("UIStroke")
+local UIGradient_6 = Instance.new("UIGradient")
+local UICorner_22 = Instance.new("UICorner")
+local UIGradient_7 = Instance.new("UIGradient")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local remotepath = Instance.new("TextLabel")
+local UICorner_23 = Instance.new("UICorner")
+
+--Properties:
+
+quirkyCMD.Name = "quirkyCMD"
+quirkyCMD.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+quirkyCMD.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Unused.Name = "Unused"
+Unused.Parent = quirkyCMD
+Unused.AnchorPoint = Vector2.new(0.5, 0.5)
+Unused.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Unused.BackgroundTransparency = 1.000
+Unused.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Unused.BorderSizePixel = 0
+Unused.Position = UDim2.new(0.5, 0, 0.5, 0)
+Unused.Size = UDim2.new(0.419200003, 0, 0.525889993, 0)
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = Unused
+
+UI.Name = "UI"
+UI.Parent = Unused
+UI.AnchorPoint = Vector2.new(0.5, 0.5)
+UI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UI.BorderSizePixel = 0
+UI.Position = UDim2.new(0.5, 0, 0.5, 0)
+UI.Size = UDim2.new(0, 524, 0, 325)
+UI.Image = "rbxassetid://121451197495113"
+
+aa.Name = "aa"
+aa.Parent = UI
+aa.AnchorPoint = Vector2.new(0.5, 0.5)
+aa.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aa.BackgroundTransparency = 1.000
+aa.BorderColor3 = Color3.fromRGB(27, 42, 53)
+aa.Position = UDim2.new(0.305720955, 0, 0.5, 0)
+aa.Size = UDim2.new(-0.0809073299, 24, 0.926153839, 24)
+aa.Image = "rbxassetid://3570695787"
+aa.ImageColor3 = Color3.fromRGB(26, 26, 26)
+aa.ScaleType = Enum.ScaleType.Slice
+aa.SliceCenter = Rect.new(100, 100, 100, 100)
+aa.SliceScale = 0.120
+
+LeftBar.Name = "Left Bar"
+LeftBar.Parent = UI
+LeftBar.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+LeftBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LeftBar.BorderSizePixel = 0
+LeftBar.Size = UDim2.new(0, 169, 0, 325)
+
+Logo.Name = "Logo"
+Logo.Parent = LeftBar
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Logo.BorderSizePixel = 0
+Logo.Position = UDim2.new(0.137945414, 0, 0.0699633807, 0)
+Logo.Size = UDim2.new(0, 127, 0, 50)
+Logo.ZIndex = 3
+Logo.Font = Enum.Font.Unknown
+Logo.Text = "QuirkyCMD"
+Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
+Logo.TextScaled = true
+Logo.TextSize = 32.000
+Logo.TextStrokeTransparency = 0.000
+Logo.TextWrapped = true
+
+Frame.Parent = Logo
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 0.900
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.00724684354, 0, 0.959999979, 0)
+Frame.Size = UDim2.new(0, 126, 0, 2)
+
+TextLabel.Parent = Logo
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.125984251, 0, -0.319999993, 0)
+TextLabel.Size = UDim2.new(0, 38, 0, 24)
+TextLabel.Font = Enum.Font.Fantasy
+TextLabel.Text = "BETA"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = LeftBar
+
+HomeFrame.Name = "HomeFrame"
+HomeFrame.Parent = LeftBar
+HomeFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HomeFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HomeFrame.BorderSizePixel = 0
+HomeFrame.Position = UDim2.new(1, 0, 0, 0)
+HomeFrame.Size = UDim2.new(0, 355, 0, 325)
+HomeFrame.ZIndex = 4
+
+UICorner_3.CornerRadius = UDim.new(0, 10)
+UICorner_3.Parent = HomeFrame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient.Parent = HomeFrame
+
+Home.Name = "Home"
+Home.Parent = HomeFrame
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 0.900
+Home.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Home.BorderSizePixel = 0
+Home.Position = UDim2.new(0.0192233231, 0, 0.177347362, 0)
+Home.Size = UDim2.new(0, 341, 0, 1)
+Home.ZIndex = 4
+
+TextLabel_2.Parent = Home
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(-1.78988728e-07, 0, -50.1484833, 0)
+TextLabel_2.Size = UDim2.new(0, 340, 0, 50)
+TextLabel_2.ZIndex = 3
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "Dashboard"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 32.000
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_3.Parent = Home
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(-8.92326852e-08, 0, 17.0727081, 0)
+TextLabel_3.Size = UDim2.new(0, 340, 0, 123)
+TextLabel_3.ZIndex = 3
+TextLabel_3.Font = Enum.Font.Gotham
+TextLabel_3.Text = "WARNING: Running the script in random games could cause a kick, game ban or other side effects. Please don't run the script in random games on your main account, or just stick to the games in the confirmed games channel."
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 15.000
+TextLabel_3.TextWrapped = true
+TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_3.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_4.Parent = TextLabel_3
+
+UIStroke.Parent = TextLabel_3
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Transparency = 0.900
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UIPadding.Parent = TextLabel_3
+UIPadding.PaddingLeft = UDim.new(0, 8)
+UIPadding.PaddingTop = UDim.new(0, 5)
+
+TextLabel_4.Parent = Home
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(-1.78988728e-07, 0, 158.594254, 0)
+TextLabel_4.Size = UDim2.new(0, 340, 0, 101)
+TextLabel_4.ZIndex = 3
+TextLabel_4.Font = Enum.Font.Gotham
+TextLabel_4.Text = "THIS IS NOT A SERVERSIDE AND I DONT INFECT GAMES OR DECIDE WHICH ONES WORK AND WHICH ONES DONT. QuirkyCMD on top :3"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 15.000
+TextLabel_4.TextWrapped = true
+TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_4.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_5.Parent = TextLabel_4
+
+UIStroke_2.Parent = TextLabel_4
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Transparency = 0.900
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UIPadding_2.Parent = TextLabel_4
+UIPadding_2.PaddingLeft = UDim.new(0, 8)
+UIPadding_2.PaddingTop = UDim.new(0, 5)
+
+TextLabel_5.Parent = HomeFrame
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.471198797, 0, 0.0615384616, 0)
+TextLabel_5.Size = UDim2.new(0, 165, 0, 24)
+TextLabel_5.Font = Enum.Font.Fantasy
+TextLabel_5.Text = "QuirkyCMD by Cynatica"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 14.000
+
+SettingsFrame.Name = "SettingsFrame"
+SettingsFrame.Parent = LeftBar
+SettingsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SettingsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SettingsFrame.BorderSizePixel = 0
+SettingsFrame.Position = UDim2.new(1, 0, 0, 0)
+SettingsFrame.Size = UDim2.new(0, 355, 0, 325)
+SettingsFrame.Visible = false
+SettingsFrame.ZIndex = 5
+
+UICorner_6.CornerRadius = UDim.new(0, 10)
+UICorner_6.Parent = SettingsFrame
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient_2.Parent = SettingsFrame
+
+Frame_2.Parent = SettingsFrame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 0.900
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0192233231, 0, 0.177347362, 0)
+Frame_2.Size = UDim2.new(0, 341, 0, 1)
+Frame_2.ZIndex = 4
+
+TextLabel_6.Parent = Frame_2
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.0234602317, 0, -49.1484833, 0)
+TextLabel_6.Size = UDim2.new(0, 340, 0, 50)
+TextLabel_6.ZIndex = 3
+TextLabel_6.Font = Enum.Font.GothamBold
+TextLabel_6.Text = "Settings"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 32.000
+TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
+
+Toggle.Name = "Toggle"
+Toggle.Parent = SettingsFrame
+Toggle.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.BorderSizePixel = 0
+Toggle.Position = UDim2.new(0.752871931, 0, 0.258219361, 0)
+Toggle.Size = UDim2.new(0, 63, 0, 30)
+Toggle.ZIndex = 100
+
+UICorner_7.Parent = Toggle
+
+Toggle_2.Name = "Toggle"
+Toggle_2.Parent = Toggle
+Toggle_2.BackgroundColor3 = Color3.fromRGB(23, 179, 34)
+Toggle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_2.BorderSizePixel = 0
+Toggle_2.Position = UDim2.new(0.537331223, 0, -0.00178426108, 0)
+Toggle_2.Size = UDim2.new(0, 31, 0, 30)
+Toggle_2.ZIndex = 100
+
+UICorner_8.Parent = Toggle_2
+
+UIAspectRatioConstraint.Parent = Toggle_2
+
+TextButton.Parent = Toggle_2
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.ZIndex = 100
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+PlaySounds.Name = "PlaySounds"
+PlaySounds.Parent = SettingsFrame
+PlaySounds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlaySounds.BackgroundTransparency = 1.000
+PlaySounds.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlaySounds.BorderSizePixel = 0
+PlaySounds.Position = UDim2.new(0.0192231517, 0, 0.241831526, 0)
+PlaySounds.Selectable = false
+PlaySounds.Size = UDim2.new(0, 340, 0, 39)
+PlaySounds.Font = Enum.Font.Gotham
+PlaySounds.Text = "Play Sounds"
+PlaySounds.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlaySounds.TextSize = 24.000
+PlaySounds.TextWrapped = true
+PlaySounds.TextXAlignment = Enum.TextXAlignment.Left
+PlaySounds.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_9.Parent = PlaySounds
+
+UIPadding_3.Parent = PlaySounds
+UIPadding_3.PaddingLeft = UDim.new(0, 8)
+UIPadding_3.PaddingTop = UDim.new(0, 5)
+
+UIStroke_3.Parent = PlaySounds
+UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_3.Transparency = 0.900
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+SimpleUI.Name = "SimpleUI"
+SimpleUI.Parent = SettingsFrame
+SimpleUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SimpleUI.BackgroundTransparency = 1.000
+SimpleUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SimpleUI.BorderSizePixel = 0
+SimpleUI.Position = UDim2.new(0.0192231517, 0, 0.392600745, 0)
+SimpleUI.Selectable = false
+SimpleUI.Size = UDim2.new(0, 340, 0, 39)
+SimpleUI.Font = Enum.Font.Gotham
+SimpleUI.Text = "coming soon."
+SimpleUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+SimpleUI.TextSize = 24.000
+SimpleUI.TextWrapped = true
+SimpleUI.TextXAlignment = Enum.TextXAlignment.Left
+SimpleUI.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_10.Parent = SimpleUI
+
+UIPadding_4.Parent = SimpleUI
+UIPadding_4.PaddingLeft = UDim.new(0, 8)
+UIPadding_4.PaddingTop = UDim.new(0, 5)
+
+UIStroke_4.Parent = SimpleUI
+UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_4.Transparency = 0.900
+UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Toggle_3.Name = "Toggle"
+Toggle_3.Parent = SettingsFrame
+Toggle_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Toggle_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_3.BorderSizePixel = 0
+Toggle_3.Position = UDim2.new(0.752871931, 0, 0.408988595, 0)
+Toggle_3.Size = UDim2.new(0, 63, 0, 30)
+Toggle_3.ZIndex = 100
+
+UICorner_11.Parent = Toggle_3
+
+Toggle_4.Name = "Toggle"
+Toggle_4.Parent = Toggle_3
+Toggle_4.BackgroundColor3 = Color3.fromRGB(23, 179, 34)
+Toggle_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_4.BorderSizePixel = 0
+Toggle_4.Position = UDim2.new(0.537331223, 0, -0.00178426108, 0)
+Toggle_4.Size = UDim2.new(0, 31, 0, 30)
+Toggle_4.ZIndex = 100
+
+UICorner_12.Parent = Toggle_4
+
+UIAspectRatioConstraint_2.Parent = Toggle_4
+
+TextButton_2.Parent = Toggle_4
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.BackgroundTransparency = 1.000
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Size = UDim2.new(1, 0, 1, 0)
+TextButton_2.ZIndex = 100
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = ""
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+
+Toggle_5.Name = "Toggle"
+Toggle_5.Parent = SettingsFrame
+Toggle_5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Toggle_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_5.BorderSizePixel = 0
+Toggle_5.Position = UDim2.new(0.755688846, 0, 0.559757829, 0)
+Toggle_5.Size = UDim2.new(0, 63, 0, 30)
+Toggle_5.ZIndex = 100
+
+UICorner_13.Parent = Toggle_5
+
+Toggle_6.Name = "Toggle"
+Toggle_6.Parent = Toggle_5
+Toggle_6.BackgroundColor3 = Color3.fromRGB(23, 179, 34)
+Toggle_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_6.BorderSizePixel = 0
+Toggle_6.Position = UDim2.new(0.537331223, 0, -0.00178426108, 0)
+Toggle_6.Size = UDim2.new(0, 31, 0, 30)
+Toggle_6.ZIndex = 100
+
+UICorner_14.Parent = Toggle_6
+
+UIAspectRatioConstraint_3.Parent = Toggle_6
+
+TextButton_3.Parent = Toggle_6
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.BackgroundTransparency = 1.000
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Size = UDim2.new(1, 0, 1, 0)
+TextButton_3.ZIndex = 100
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = ""
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextSize = 14.000
+
+SimpleUI_2.Name = "SimpleUI"
+SimpleUI_2.Parent = SettingsFrame
+SimpleUI_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SimpleUI_2.BackgroundTransparency = 1.000
+SimpleUI_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SimpleUI_2.BorderSizePixel = 0
+SimpleUI_2.Position = UDim2.new(0.0220400523, 0, 0.543370008, 0)
+SimpleUI_2.Selectable = false
+SimpleUI_2.Size = UDim2.new(0, 340, 0, 39)
+SimpleUI_2.Font = Enum.Font.Gotham
+SimpleUI_2.Text = "coming soon."
+SimpleUI_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SimpleUI_2.TextSize = 24.000
+SimpleUI_2.TextWrapped = true
+SimpleUI_2.TextXAlignment = Enum.TextXAlignment.Left
+SimpleUI_2.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_15.Parent = SimpleUI_2
+
+UIPadding_5.Parent = SimpleUI_2
+UIPadding_5.PaddingLeft = UDim.new(0, 8)
+UIPadding_5.PaddingTop = UDim.new(0, 5)
+
+UIStroke_5.Parent = SimpleUI_2
+UIStroke_5.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_5.Transparency = 0.900
+UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Settings.Name = "Settings"
+Settings.Parent = LeftBar
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.130741462, 0, 0.438754588, 0)
+Settings.Size = UDim2.new(0, 127, 0, 39)
+Settings.Font = Enum.Font.SourceSansBold
+Settings.Text = "      Settings"
+Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Settings.TextSize = 16.000
+
+ImageLabel.Parent = Settings
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0960000604, 0, 0.183077306, 0)
+ImageLabel.Size = UDim2.new(0, 24, 0, 33)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=93247125655369"
+ImageLabel.ImageTransparency = 0.100
+
+UIAspectRatioConstraint_4.Parent = ImageLabel
+
+Frame_3.Parent = Settings
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BackgroundTransparency = 0.900
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.00724684354, 0, 0.959999979, 0)
+Frame_3.Size = UDim2.new(0, 126, 0, 2)
+
+Commands.Name = "Commands"
+Commands.Parent = LeftBar
+Commands.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Commands.BackgroundTransparency = 1.000
+Commands.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Commands.BorderSizePixel = 0
+Commands.Position = UDim2.new(0.136658624, 0, 0.582441986, 0)
+Commands.Size = UDim2.new(0, 127, 0, 39)
+Commands.Font = Enum.Font.SourceSansBold
+Commands.Text = "           Commands"
+Commands.TextColor3 = Color3.fromRGB(255, 255, 255)
+Commands.TextSize = 16.000
+
+ImageLabel_2.Parent = Commands
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0.0960000604, 0, 0.183077306, 0)
+ImageLabel_2.Size = UDim2.new(0, 24, 0, 33)
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=98164355303403"
+
+UIAspectRatioConstraint_5.Parent = ImageLabel_2
+
+Frame_4.Parent = Commands
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BackgroundTransparency = 0.900
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Position = UDim2.new(0.00724684354, 0, 0.959999979, 0)
+Frame_4.Size = UDim2.new(0, 126, 0, 2)
+
+ImageButton.Parent = LeftBar
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 100.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.112426035, 0, 0.72307694, 0)
+ImageButton.Size = UDim2.new(0, 132, 0, 70)
+ImageButton.Image = "rbxassetid://116165959475696"
+
 cmds.Name = "cmds"
-cmds.Active = true
+cmds.Parent = LeftBar
 cmds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 cmds.BorderColor3 = Color3.fromRGB(0, 0, 0)
 cmds.BorderSizePixel = 0
-cmds.Position = UDim2.fromScale(0.446, 0.305)
-cmds.Size = UDim2.fromScale(0.108, 0.389)
-cmds.Parent = quirkycmd
+cmds.Position = UDim2.new(1, 0, 0, 0)
+cmds.Size = UDim2.new(0, 355, 0, 325)
+cmds.Visible = false
+cmds.ZIndex = 5
 
-local cmdlist = Instance.new("ScrollingFrame")
-cmdlist.Name = "cmdList"
-cmdlist.AutomaticCanvasSize = Enum.AutomaticSize.Y
-cmdlist.CanvasSize = UDim2.new()
-cmdlist.ScrollBarThickness = 8
-cmdlist.ScrollingDirection = Enum.ScrollingDirection.Y
-cmdlist.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-cmdlist.BorderColor3 = Color3.fromRGB(0, 0, 0)
-cmdlist.BorderSizePixel = 0
-cmdlist.Position = UDim2.fromScale(0, 0.0566)
-cmdlist.Size = UDim2.fromScale(1, 0.943)
+UICorner_16.CornerRadius = UDim.new(0, 10)
+UICorner_16.Parent = cmds
 
-local template = Instance.new("TextLabel")
-template.Name = "template"
-template.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
-template.Text = "error occured, dm quirky"
-template.TextColor3 = Color3.fromRGB(200, 200, 200)
-template.TextScaled = true
-template.TextSize = 14
-template.TextWrapped = true
-template.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-template.BackgroundTransparency = 1
-template.BorderColor3 = Color3.fromRGB(0, 0, 0)
-template.BorderSizePixel = 0
-template.Size = UDim2.fromScale(0.9, 0.1)
-template.Parent = cmdlist
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient_3.Parent = cmds
 
-local uilistlayout = Instance.new("UIListLayout")
-uilistlayout.Name = "UIListLayout"
-uilistlayout.Padding = UDim.new(0, 5)
-uilistlayout.SortOrder = Enum.SortOrder.LayoutOrder
-uilistlayout.Parent = cmdlist
+Frame_5.Parent = cmds
+Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.BackgroundTransparency = 0.900
+Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Position = UDim2.new(0.0192233231, 0, 0.177347362, 0)
+Frame_5.Size = UDim2.new(0, 341, 0, 1)
+Frame_5.ZIndex = 4
 
-cmdlist.Parent = cmds
+TextLabel_7.Parent = Frame_5
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.0234602317, 0, -49.1484833, 0)
+TextLabel_7.Size = UDim2.new(0, 340, 0, 50)
+TextLabel_7.ZIndex = 3
+TextLabel_7.Font = Enum.Font.GothamBold
+TextLabel_7.Text = "Commands"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 32.000
+TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
 
-local closebutton = Instance.new("TextButton")
-closebutton.Name = "closeButton"
-closebutton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
-closebutton.Text = "Close"
-closebutton.TextColor3 = Color3.fromRGB(255, 255, 255)
-closebutton.TextScaled = true
-closebutton.TextSize = 14
-closebutton.TextWrapped = true
-closebutton.Active = false
-closebutton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-closebutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-closebutton.BorderSizePixel = 0
-closebutton.Size = UDim2.fromScale(1, 0.0566)
-closebutton.Parent = cmds
+cmdList.Name = "cmdList"
+cmdList.Parent = cmds
+cmdList.Active = true
+cmdList.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+cmdList.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cmdList.BorderSizePixel = 0
+cmdList.Position = UDim2.new(0.0394366197, 0, 0.203076929, 0)
+cmdList.Size = UDim2.new(0, 333, 0, 251)
+cmdList.ScrollBarImageColor3 = Color3.fromRGB(58, 58, 58)
+cmdList.BottomImage = "rbxassetid://12530016893"
+cmdList.MidImage = "rbxassetid://15062402986"
+cmdList.ScrollBarThickness = 6
+
+UICorner_17.Parent = cmdList
+
+UIStroke_6.Parent = cmdList
+UIStroke_6.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_6.Transparency = 0.900
+UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UIPadding_6.Parent = cmdList
+UIPadding_6.PaddingLeft = UDim.new(0, 8)
+UIPadding_6.PaddingTop = UDim.new(0, 5)
+
+Home_2.Name = "Home"
+Home_2.Parent = LeftBar
+Home_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home_2.BackgroundTransparency = 1.000
+Home_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Home_2.BorderSizePixel = 0
+Home_2.Position = UDim2.new(0.136658624, 0, 0.29865694, 0)
+Home_2.Size = UDim2.new(0, 127, 0, 39)
+Home_2.Font = Enum.Font.SourceSansBold
+Home_2.Text = "Home"
+Home_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Home_2.TextSize = 16.000
+
+ImageLabel_3.Parent = Home_2
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.BackgroundTransparency = 1.000
+ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Position = UDim2.new(0.0960000604, 0, 0.183076903, 0)
+ImageLabel_3.Size = UDim2.new(0, 24, 0, 33)
+ImageLabel_3.Image = "http://www.roblox.com/asset/?id=118376465687650"
+
+UIAspectRatioConstraint_6.Parent = ImageLabel_3
+
+Frame_6.Parent = Home_2
+Frame_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_6.BackgroundTransparency = 0.900
+Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_6.BorderSizePixel = 0
+Frame_6.Position = UDim2.new(0.00724684354, 0, 0.959999979, 0)
+Frame_6.Size = UDim2.new(0, 126, 0, 2)
+
+UIStroke_7.Parent = UI
+UIStroke_7.Color = Color3.fromRGB(171, 171, 171)
+UIStroke_7.Thickness = 2.000
+
+UICorner_18.CornerRadius = UDim.new(0, 10)
+UICorner_18.Parent = UI
+
+CommandBar.Name = "CommandBar"
+CommandBar.Parent = UI
+CommandBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CommandBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CommandBar.BorderSizePixel = 0
+CommandBar.Position = UDim2.new(0, 0, 0, 331)
+CommandBar.Size = UDim2.new(0, 524, 0, 47)
+
+aa_2.Name = "aa"
+aa_2.Parent = CommandBar
+aa_2.AnchorPoint = Vector2.new(0.5, 0.5)
+aa_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aa_2.BackgroundTransparency = 1.000
+aa_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+aa_2.Position = UDim2.new(0.5, 0, 0.499999851, 0)
+aa_2.Size = UDim2.new(0.95419848, 24, 0.489361376, 24)
+aa_2.ZIndex = 2
+aa_2.Image = "rbxassetid://3570695787"
+aa_2.ImageColor3 = Color3.fromRGB(26, 26, 26)
+aa_2.ScaleType = Enum.ScaleType.Slice
+aa_2.SliceCenter = Rect.new(100, 100, 100, 100)
+aa_2.SliceScale = 0.120
+
+cmdBox.Name = "cmdBox"
+cmdBox.Parent = aa_2
+cmdBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cmdBox.BackgroundTransparency = 1.000
+cmdBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cmdBox.BorderSizePixel = 0
+cmdBox.Position = UDim2.new(0.0133587783, 0, 0.217655852, 0)
+cmdBox.Size = UDim2.new(0, 510, 0, 26)
+cmdBox.Font = Enum.Font.RobotoMono
+cmdBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+cmdBox.Text = ""
+cmdBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+cmdBox.TextSize = 16.000
+cmdBox.TextWrapped = true
+cmdBox.TextXAlignment = Enum.TextXAlignment.Left
+cmdBox.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_19.Parent = cmdBox
+
+UIPadding_7.Parent = cmdBox
+UIPadding_7.PaddingLeft = UDim.new(0, 8)
+UIPadding_7.PaddingTop = UDim.new(0, 5)
+
+UIStroke_8.Parent = cmdBox
+UIStroke_8.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_8.Transparency = 0.900
+UIStroke_8.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UIStroke_9.Parent = CommandBar
+UIStroke_9.Color = Color3.fromRGB(171, 171, 171)
+UIStroke_9.Thickness = 2.000
+
+UICorner_20.CornerRadius = UDim.new(0, 10)
+UICorner_20.Parent = CommandBar
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient_4.Parent = CommandBar
+
+Autofill.Name = "Autofill"
+Autofill.Parent = CommandBar
+Autofill.Active = true
+Autofill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Autofill.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Autofill.BorderSizePixel = 0
+Autofill.Position = UDim2.new(0, 0, -7.04255342, 0)
+Autofill.Size = UDim2.new(0, 524, 0, 325)
+Autofill.Visible = false
+
+UIStroke_10.Parent = Autofill
+UIStroke_10.Color = Color3.fromRGB(171, 171, 171)
+UIStroke_10.Thickness = 2.000
+
+UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient_5.Parent = Autofill
+
+UICorner_21.CornerRadius = UDim.new(0, 10)
+UICorner_21.Parent = Autofill
+
+CommandDoom.Name = "CommandDoom"
+CommandDoom.Parent = Autofill
+CommandDoom.Active = true
+CommandDoom.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CommandDoom.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CommandDoom.BorderSizePixel = 0
+CommandDoom.ClipsDescendants = false
+CommandDoom.Size = UDim2.new(0, 524, 0, 325)
+CommandDoom.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+CommandDoom.ScrollBarThickness = 0
+
+UIStroke_11.Parent = CommandDoom
+UIStroke_11.Color = Color3.fromRGB(171, 171, 171)
+UIStroke_11.Thickness = 2.000
+
+UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient_6.Parent = CommandDoom
+
+UICorner_22.CornerRadius = UDim.new(0, 10)
+UICorner_22.Parent = CommandDoom
+
+UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient_7.Parent = UI
+
+UIAspectRatioConstraint_7.Parent = quirkyCMD
+UIAspectRatioConstraint_7.AspectRatio = 1.935
+
+remotepath.Name = "remotepath"
+remotepath.Parent = quirkyCMD
+remotepath.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+remotepath.BackgroundTransparency = 0.600
+remotepath.BorderColor3 = Color3.fromRGB(0, 0, 0)
+remotepath.BorderSizePixel = 0
+remotepath.Position = UDim2.new(0.395616412, 0, 0.249097273, 0)
+remotepath.Size = UDim2.new(0.208000004, 0, 0.0439999998, 0)
+remotepath.Visible = false
+remotepath.Text = ""
+remotepath.TextColor3 = Color3.fromRGB(255, 255, 255)
+remotepath.TextScaled = true
+remotepath.TextSize = 14.000
+remotepath.TextTransparency = 0.600
+remotepath.TextWrapped = true
+
+UICorner_23.CornerRadius = UDim.new(0, 3)
+UICorner_23.Parent = remotepath
+
+-- Scripts:
+
+local function MPCKASV_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local TweenService = game:GetService("TweenService")
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local playerGui = player:WaitForChild("PlayerGui")
+	
+	local button = script.Parent
+	local target = button.Parent
+	
+	local SOUND_ID = "rbxassetid://876939830"
+	local ORIGINAL_VOLUME = 0.6
+	
+	local function setClickSoundVolume(volume)
+		for _, descendant in ipairs(playerGui:GetDescendants()) do
+			if descendant:IsA("Sound") and descendant.SoundId == SOUND_ID then
+				descendant.Volume = volume
+			end
+		end
+	end
+	
+	local function green(target)
+		setClickSoundVolume(ORIGINAL_VOLUME)
+		TweenService:Create(target, TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut), {
+			BackgroundColor3 = Color3.fromRGB(23, 179, 34)
+		}):Play()
+		target:TweenPosition(UDim2.new(0.521, 0, -0.002, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 1)
+	end
+	
+	local function red(target)
+		setClickSoundVolume(0)
+		TweenService:Create(target, TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut), {
+			BackgroundColor3 = Color3.fromRGB(179, 31, 12)
+		}):Play()
+		target:TweenPosition(UDim2.new(-0.008, 0, 0.029, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 1)
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		if target.Position == UDim2.new(0.521, 0, -0.002, 0) then
+			red(target)
+		else
+			green(target)
+		end
+	end)
+	
+end
+coroutine.wrap(MPCKASV_script)()
+local function FOAJKB_script() -- Settings.LocalScript 
+	local script = Instance.new('LocalScript', Settings)
+
+	local TweenService = game:GetService("TweenService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local player = Players.LocalPlayer
+	local playerGui = player:WaitForChild("PlayerGui")
+	
+	local targetFrameName = "SettingsFrame"
+	local activeTween = nil
+	local finalPositions = {}
+	
+	local clickSound = Instance.new("Sound")
+	clickSound.SoundId = "rbxassetid://876939830" 
+	clickSound.Volume = 0.6
+	clickSound.Parent = button
+	
+	local function findDescendant(parent, name)
+		for _, descendant in pairs(parent:GetDescendants()) do
+			if descendant:IsA("Frame") and descendant.Name == name then
+				return descendant
+			end
+		end
+		return nil
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		clickSound:Play()
+	
+		local targetFrame = findDescendant(playerGui, targetFrameName)
+		if not targetFrame then return end
+	
+		local originalPosition = finalPositions[targetFrame]
+		if not originalPosition then
+			originalPosition = targetFrame.Position
+			finalPositions[targetFrame] = originalPosition
+		end
+	
+		if activeTween then
+			activeTween:Cancel()
+		end
+	
+		for _, sibling in ipairs(targetFrame.Parent:GetChildren()) do
+			if sibling:IsA("Frame") and sibling ~= targetFrame then
+				sibling.Visible = false
+			end
+		end
+	
+		targetFrame.Position = UDim2.new(originalPosition.X.Scale - 0.08, 0, originalPosition.Y.Scale, 0)
+		targetFrame.BackgroundTransparency = 1
+		for _, desc in ipairs(targetFrame:GetDescendants()) do
+			if desc:IsA("TextLabel") or desc:IsA("TextButton") then
+				desc.TextTransparency = 1
+			end
+		end
+	
+		targetFrame.Visible = true
+	
+		activeTween = TweenService:Create(
+			targetFrame,
+			TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out),
+			{
+				Position = originalPosition,
+				BackgroundTransparency = 0
+			}
+		)
+		activeTween:Play()
+	
+		for _, desc in ipairs(targetFrame:GetDescendants()) do
+			if desc:IsA("TextLabel") or desc:IsA("TextButton") then
+				local fadeTween = TweenService:Create(
+					desc,
+					TweenInfo.new(0.45, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+					{ TextTransparency = 0 }
+				)
+				fadeTween:Play()
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(FOAJKB_script)()
+local function YHEWG_script() -- Commands.LocalScript 
+	local script = Instance.new('LocalScript', Commands)
+
+	local TweenService = game:GetService("TweenService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local player = Players.LocalPlayer
+	local playerGui = player:WaitForChild("PlayerGui")
+	
+	local targetFrameName = "cmds"
+	local activeTween = nil
+	local finalPositions = {}
+	
+	local clickSound = Instance.new("Sound")
+	clickSound.SoundId = "rbxassetid://876939830" 
+	clickSound.Volume = 0.6
+	clickSound.Parent = button
+	
+	local function findDescendant(parent, name)
+		for _, descendant in pairs(parent:GetDescendants()) do
+			if descendant:IsA("Frame") and descendant.Name == name then
+				return descendant
+			end
+		end
+		return nil
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		clickSound:Play()
+	
+		local targetFrame = findDescendant(playerGui, targetFrameName)
+		if not targetFrame then return end
+	
+		local originalPosition = finalPositions[targetFrame]
+		if not originalPosition then
+			originalPosition = targetFrame.Position
+			finalPositions[targetFrame] = originalPosition
+		end
+	
+		if activeTween then
+			activeTween:Cancel()
+		end
+	
+		for _, sibling in ipairs(targetFrame.Parent:GetChildren()) do
+			if sibling:IsA("Frame") and sibling ~= targetFrame then
+				sibling.Visible = false
+			end
+		end
+	
+		targetFrame.Position = UDim2.new(originalPosition.X.Scale - 0.08, 0, originalPosition.Y.Scale, 0)
+		targetFrame.BackgroundTransparency = 1
+		for _, desc in ipairs(targetFrame:GetDescendants()) do
+			if desc:IsA("TextLabel") or desc:IsA("TextButton") then
+				desc.TextTransparency = 1
+			end
+		end
+	
+		targetFrame.Visible = true
+	
+		activeTween = TweenService:Create(
+			targetFrame,
+			TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out),
+			{
+				Position = originalPosition,
+				BackgroundTransparency = 0
+			}
+		)
+		activeTween:Play()
+	
+		for _, desc in ipairs(targetFrame:GetDescendants()) do
+			if desc:IsA("TextLabel") or desc:IsA("TextButton") then
+				local fadeTween = TweenService:Create(
+					desc,
+					TweenInfo.new(0.45, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+					{ TextTransparency = 0 }
+				)
+				fadeTween:Play()
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(YHEWG_script)()
+local function THUAWSH_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local button = script.Parent
+	local urlText = "https://discord.gg/aG6KdRje3x"
+	local TweenService = game:GetService("TweenService")
+	
+	local clickSound = Instance.new("Sound")
+	clickSound.SoundId = "rbxassetid://876939830"
+	clickSound.Volume = 0.6
+	clickSound.Parent = button
+	
+	button.MouseButton1Click:Connect(function()
+		clickSound:Play()
+	
+		local player = game.Players.LocalPlayer
+		local screenGui = Instance.new("ScreenGui")
+		screenGui.Name = "DiscordServer"
+		screenGui.ResetOnSpawn = false
+		screenGui.IgnoreGuiInset = true
+		screenGui.Parent = player:WaitForChild("PlayerGui")
+	
+		local frame = Instance.new("Frame")
+		frame.Size = UDim2.new(0, 280, 0, 90)
+		frame.Position = UDim2.new(1, -300, 1, -110)
+		frame.AnchorPoint = Vector2.new(0, 0)
+		frame.BackgroundColor3 = Color3.fromRGB(40, 40, 45)
+		frame.BorderSizePixel = 0
+		frame.BackgroundTransparency = 1 -- start transparent
+		frame.Parent = screenGui
+	
+		local corner = Instance.new("UICorner")
+		corner.CornerRadius = UDim.new(0, 12)
+		corner.Parent = frame
+	
+		local shadow = Instance.new("ImageLabel")
+		shadow.Name = "Shadow"
+		shadow.AnchorPoint = Vector2.new(0.5, 0.5)
+		shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+		shadow.Size = UDim2.new(1, 10, 1, 10)
+		shadow.BackgroundTransparency = 1
+		shadow.Image = "rbxassetid://1316045217"
+		shadow.ImageColor3 = Color3.new(0, 0, 0)
+		shadow.ImageTransparency = 1 -- start fully transparent
+		shadow.ScaleType = Enum.ScaleType.Slice
+		shadow.SliceCenter = Rect.new(10, 10, 118, 118)
+		shadow.ZIndex = 0
+		shadow.Parent = frame
+		frame.ZIndex = 1
+	
+		local textLabel = Instance.new("TextLabel")
+		textLabel.Size = UDim2.new(1, -20, 0.55, 0)
+		textLabel.Position = UDim2.new(0, 10, 0, 6)
+		textLabel.Text = "Join the QuirkyCMD Server:\n" .. urlText
+		textLabel.TextColor3 = Color3.new(1, 1, 1)
+		textLabel.BackgroundTransparency = 1
+		textLabel.TextWrapped = true
+		textLabel.TextScaled = true
+		textLabel.Font = Enum.Font.Gotham
+		textLabel.TextXAlignment = Enum.TextXAlignment.Left
+		textLabel.TextYAlignment = Enum.TextYAlignment.Top
+		textLabel.TextTransparency = 1 -- start transparent
+		textLabel.Parent = frame
+	
+		local copyButton = Instance.new("TextButton")
+		copyButton.Size = UDim2.new(0.5, 0, 0.25, 0)
+		copyButton.Position = UDim2.new(0.25, 0, 0.7, 0)
+		copyButton.Text = "Copy Link"
+		copyButton.BackgroundColor3 = Color3.fromRGB(65, 105, 225)
+		copyButton.TextColor3 = Color3.new(1, 1, 1)
+		copyButton.Font = Enum.Font.GothamMedium
+		copyButton.TextScaled = true
+		copyButton.AutoButtonColor = true
+		copyButton.BackgroundTransparency = 1 -- start transparent
+		copyButton.TextTransparency = 1 -- start transparent
+		copyButton.Parent = frame
+	
+		local btnCorner = Instance.new("UICorner")
+		btnCorner.CornerRadius = UDim.new(1, 0)
+		btnCorner.Parent = copyButton
+	
+		copyButton.MouseButton1Click:Connect(function()
+			if setclipboard then
+				setclipboard(urlText)
+				copyButton.Text = "Copied!"
+				wait(1)
+				copyButton.Text = "Copy Link"
+			else
+				copyButton.Text = "Clipboard Unsupported"
+				wait(1.5)
+				copyButton.Text = "Copy Link"
+			end
+		end)
+	
+		-- Fade-in tweens
+		local tweenInfo = TweenInfo.new(0.6, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out)
+		local fadeFrame = TweenService:Create(frame, tweenInfo, {BackgroundTransparency = 0})
+		local fadeShadow = TweenService:Create(shadow, tweenInfo, {ImageTransparency = 0.7})
+		local fadeText = TweenService:Create(textLabel, TweenInfo.new(0.7, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {TextTransparency = 0})
+		local fadeBtnBg = TweenService:Create(copyButton, tweenInfo, {BackgroundTransparency = 0})
+		local fadeBtnText = TweenService:Create(copyButton, TweenInfo.new(0.7, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {TextTransparency = 0})
+	
+		fadeFrame:Play()
+		fadeShadow:Play()
+		fadeText:Play()
+		fadeBtnBg:Play()
+		fadeBtnText:Play()
+	
+		task.delay(5, function()
+			local fadeOutInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+			local fadeFrameOut = TweenService:Create(frame, fadeOutInfo, {BackgroundTransparency = 1})
+			local fadeTextOut = TweenService:Create(textLabel, fadeOutInfo, {TextTransparency = 1})
+			local fadeBtnOut = TweenService:Create(copyButton, fadeOutInfo, {BackgroundTransparency = 1, TextTransparency = 1})
+			local fadeShadowOut = TweenService:Create(shadow, fadeOutInfo, {ImageTransparency = 1})
+	
+			fadeFrameOut:Play()
+			fadeTextOut:Play()
+			fadeBtnOut:Play()
+			fadeShadowOut:Play()
+	
+			fadeFrameOut.Completed:Connect(function()
+				if screenGui then
+					screenGui:Destroy()
+				end
+			end)
+		end)
+	end)
+	
+end
+coroutine.wrap(THUAWSH_script)()
+local function YVZT_script() -- cmdList.LocalScript 
+	local script = Instance.new('LocalScript', cmdList)
+
+	local scrollingFrame = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	scrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+	scrollingFrame.ScrollingDirection = Enum.ScrollingDirection.Y
+	scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+	scrollingFrame.ScrollBarThickness = 8
+	scrollingFrame.ClipsDescendants = true
+	
+	local container = Instance.new("Frame")
+	container.Name = "Container"
+	container.BackgroundTransparency = 1
+	container.Size = UDim2.new(1, 0, 0, 0)
+	container.AutomaticSize = Enum.AutomaticSize.Y
+	container.Parent = scrollingFrame
+	
+	local layout = Instance.new("UIListLayout")
+	layout.Padding = UDim.new(0, 6)
+	layout.SortOrder = Enum.SortOrder.LayoutOrder
+	layout.Parent = container
+	
+	local padding = Instance.new("UIPadding")
+	padding.PaddingTop = UDim.new(0, 10)
+	padding.PaddingBottom = UDim.new(0, 10)
+	padding.PaddingLeft = UDim.new(0, 0)
+	padding.PaddingRight = UDim.new(0, 20)
+	padding.Parent = container
+	
+	local commands = {
+		{name = "admin", desc = "Grants or removes admin permissions"},
+		{name = "aliases", desc = "Prints all command aliases."},
+		{name = "bald", desc = "Removes all accessories from the character, making them bald."},
+		{name = "ban", desc = "Bans players by their UserId and deletes them from the server."},
+		{name = "bang", desc = "Plays a 'bang' animation and attaches to the target player."},
+		{name = "baseplate", desc = "Deletes everything in the workspace except large or nearby baseplates."},
+		{name = "bighats", desc = "Enlarges R15 hats by deleting scale values and original sizes."},
+		{name = "blockhats", desc = "Removes hat meshes for R6 characters."},
+		{name = "blockhead", desc = "Removes head mesh for R6 characters."},
+		{name = "blocktools", desc = "Removes any meshes from tool handles, cleaning up their visuals."},
+		{name = "bring", desc = "Teleports another player to you using tool teleportation."},
+		{name = "btools", desc = "Manipulates tools (give/remove)"},
+		{name = "clearbans", desc = "Clears the ban list."},
+		{name = "cleargui", desc = "Removes all GUI elements from the screen (from sgui)."},
+		{name = "clearlighting", desc = "Deletes all Lighting service children."},
+		{name = "clearstarter", desc = "Clears StarterGui, StarterPack, and StarterPlayer scripts except for whitelisted items."},
+		{name = "clearstorage", desc = "Deletes all objects in ReplicatedStorage except the exploit remote and chat folders."},
+		{name = "clearws", desc = "Clears the workspace of all non-player items."},
+		{name = "clickdelete", desc = "Enables click-to-delete mode by targeting with your mouse."},
+		{name = "clip", desc = "Disables noclip mode, restoring normal collision."},
+		{name = "cmds", desc = "Shows the command UI"},
+		{name = "control", desc = "Takes control of another player's character using tool-based hijacking."},
+		{name = "deletename", desc = "Deletes any object in the game whose name matches the given text."},
+		{name = "droptools", desc = "Deletes player's tool when they equip it, simulating a drop and break."},
+		{name = "explorer", desc = "Opens a dark-themed Dex Explorer GUI either from a local module or online script."},
+		{name = "fakechat", desc = "Makes your character appear like it's chatting and automatically follows another player."},
+		{name = "fling", desc = "Flings a player using physics-based forces by touching their character."},
+		{name = "fly", desc = "Enables flight mode by manipulating the character’s root part position."},
+		{name = "flyspeed", desc = "Sets the speed multiplier for flight movement."},
+		{name = "freeze", desc = "Stops all character movement by anchoring and platform-standing the humanoid."},
+		{name = "givetools", desc = "Teleports your tools into the target player’s position to force equip."},
+		{name = "goto", desc = "Teleports you to the target player's position."},
+		{name = "grabtools", desc = "Pulls all tools in the workspace to your character."},
+		{name = "gun", desc = "Manipulates tools (give/remove)"},
+		{name = "hatorbit", desc = "Makes your hats orbit around your character using physics alignment."},
+		{name = "invisible", desc = "Makes the character invisible using transparency tricks or HRP deletion."},
+		{name = "jumppower", desc = "Sets the jump power of your humanoid."},
+		{name = "kick", desc = "Deletes the player from the game (client-side)."},
+		{name = "kickaura", desc = "Automatically kicks players who get too close (within a specified range)."},
+		{name = "kill", desc = "Deletes the Neck joint, killing the player."},
+		{name = "killaura", desc = "Auto-kills nearby players in a loop based on a range."},
+		{name = "korblox", desc = "Deletes the character’s right leg to simulate the Korblox avatar."},
+		{name = "legwalk", desc = "Deletes upper arms, waist joint, and accessories to make a leg-only walking rig."},
+		{name = "lockws", desc = "Prevents new non-player objects from being added to the workspace by deleting them as they appear."},
+		{name = "loopkill", desc = "Repeatedly executes the kill command on target players every frame."},
+		{name = "mute", desc = "Deletes TextChatService text channels of players to mute them. Does not work in legacy chat."},
+		{name = "naked", desc = "Removes Pants, Shirt, and Shirt Graphic along with WrapLayer elements, making the character visually naked."},
+		{name = "noanims", desc = "Deletes the Animator and Animate script from a player to completely stop all animations."},
+		{name = "noarms", desc = "Deletes all arm parts from a character (any limb with 'arm' in its name)."},
+		{name = "nochat", desc = "Deletes chat UIs or channels, disabling chat."},
+		{name = "noclip", desc = "Disables collisions on all character parts, allowing walking through objects."},
+		{name = "noface", desc = "Deletes all face decals from the player’s head."},
+		{name = "nolegs", desc = "Deletes legs and feet from a character."},
+		{name = "nolimbs", desc = "Deletes all arm and leg parts."},
+		{name = "noseats", desc = "Deletes all Seats and VehicleSeats in the workspace."},
+		{name = "nosounds", desc = "Deletes all Sound objects across the entire game."},
+		{name = "nospawns", desc = "Deletes all SpawnLocation instances."},
+		{name = "nostats", desc = "Deletes the leaderstats folder from a player."},
+		{name = "noteams", desc = "Deletes all Teams in the game."},
+		{name = "notextures", desc = "Deletes all Decals and Textures in the workspace."},
+		{name = "notools", desc = "Manipulates tools (give/remove)"},
+		{name = "nuke", desc = "Deletes all workspace objects and players (except local player)."},
+		{name = "owner", desc = "Promotes a player to privilege level 2 (Owner)."},
+		{name = "punch", desc = "Gives the player a punch tool that can kill others on contact."},
+		{name = "punish", desc = "Deletes the entire character of the target player."},
+		{name = "ragdoll", desc = "Deletes HumanoidRootPart from a player, causing a ragdoll effect."},
+		{name = "ranks", desc = "Prints a list of all admins and owners."},
+		{name = "reanim", desc = "Starts a reanimation routine (not fully implemented in visible script)."},
+		{name = "rejoin", desc = "Teleports the player (rejoin or server hop)"},
+		{name = "rescale", desc = "Deletes avatar scaling values (HeightScale, WidthScale, etc.)."},
+		{name = "reset", desc = "Moves character parts to kill the player and trigger a respawn."},
+		{name = "serverlock", desc = "Prevents players from joining the server by deleting them on join."},
+		{name = "setbind", desc = "Sets the keybinding to toggle the command bar."},
+		{name = "setprefix", desc = "Changes the prefix used to enter commands."},
+		{name = "shutdown", desc = "Deletes all players (including local) to force a shutdown."},
+		{name = "silentkill", desc = "Same as kill, but also deletes the character afterward."},
+		{name = "sink", desc = "Deletes the humanoid from players, disabling movement."},
+		{name = "skydive", desc = "Teleports a player high into the air and lets them fall."},
+		{name = "stealtools", desc = "Steals tools from another player’s character after killing them."},
+		{name = "stripidentity", desc = "Executes naked, bald, and noface on a target."},
+		{name = "torsofling", desc = "Uses the torso to fling people by adding velocity."},
+		{name = "unadmin", desc = "Grants or removes admin permissions"},
+		{name = "unban", desc = "Removes players from the ban list."},
+		{name = "unbang", desc = "Stops the bang animation."},
+		{name = "unclickdelete", desc = "Disables the click-to-delete mode."},
+		{name = "unfly", desc = "Disables fly mode and restores default movement."},
+		{name = "unkickaura", desc = "Disables automatic kicking of nearby players."},
+		{name = "unkillaura", desc = "Disables automatic killing of nearby players."},
+		{name = "unlockws", desc = "Stops workspace anti-creation protection (lockws)."},
+		{name = "unloopkill", desc = "Removes players from the loopkill list."},
+		{name = "unowner", desc = "Removes a player's owner privileges."},
+		{name = "unserverlock", desc = "Disables the server lock."},
+		{name = "unsit", desc = "Forces players to stand by deleting seat welds."},
+		{name = "untorsofling", desc = "Disables torso fling mode."},
+		{name = "unview", desc = "Resets the camera from spectating another player."},
+		{name = "unvirus", desc = "Cancels the effects of virus."},
+		{name = "unweldws", desc = "Deletes all Welds, Attachments, and Motor6Ds from workspace parts."},
+		{name = "view", desc = "Changes your camera to follow the target player."},
+		{name = "virus", desc = "Infects players or the workspace with destructive behavior."},
+		{name = "walkspeed", desc = "Sets your walk speed."},
+		{name = "wither", desc = "Slowly deletes limbs from players over time."},
+		{name = "witherws", desc = "Slowly deletes workspace parts over time."},
+	}
+	
+	for _, cmd in ipairs(commands) do
+		local label = Instance.new("TextLabel")
+		label.Size = UDim2.new(1, 0, 0, 50)
+		label.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+		label.BorderSizePixel = 0
+		label.TextColor3 = Color3.fromRGB(255, 255, 255)
+		label.Font = Enum.Font.SourceSans
+		label.TextSize = 14
+		label.RichText = true
+		label.TextXAlignment = Enum.TextXAlignment.Left
+		label.TextYAlignment = Enum.TextYAlignment.Top
+		label.TextWrapped = true
+		label.Text = " ".. cmd.name .. "<br />" .. cmd.desc
+		label.Parent = container
+	
+		local corner = Instance.new("UICorner")
+		corner.CornerRadius = UDim.new(0, 8)
+		corner.Parent = label
+	
+		local labelPadding = Instance.new("UIPadding")
+		labelPadding.PaddingTop = UDim.new(0, 6)
+		labelPadding.PaddingBottom = UDim.new(0, 6)
+		labelPadding.PaddingLeft = UDim.new(0, 20)
+		labelPadding.PaddingRight = UDim.new(0, 8)
+		labelPadding.Parent = label
+	end
+	
+end
+coroutine.wrap(YVZT_script)()
+local function ZEKAJU_script() -- Home_2.LocalScript 
+	local script = Instance.new('LocalScript', Home_2)
+
+	local TweenService = game:GetService("TweenService")
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	local player = Players.LocalPlayer
+	local playerGui = player:WaitForChild("PlayerGui")
+	
+	local targetFrameName = "HomeFrame"
+	local activeTween = nil
+	local finalPositions = {}
+	
+	local clickSound = Instance.new("Sound")
+	clickSound.SoundId = "rbxassetid://876939830" 
+	clickSound.Volume = 0.6
+	clickSound.Parent = button
+	
+	local function findDescendant(parent, name)
+		for _, descendant in pairs(parent:GetDescendants()) do
+			if descendant:IsA("Frame") and descendant.Name == name then
+				return descendant
+			end
+		end
+		return nil
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		clickSound:Play()
+	
+		local targetFrame = findDescendant(playerGui, targetFrameName)
+		if not targetFrame then return end
+	
+		local originalPosition = finalPositions[targetFrame]
+		if not originalPosition then
+			originalPosition = targetFrame.Position
+			finalPositions[targetFrame] = originalPosition
+		end
+	
+		if activeTween then
+			activeTween:Cancel()
+		end
+	
+		for _, sibling in ipairs(targetFrame.Parent:GetChildren()) do
+			if sibling:IsA("Frame") and sibling ~= targetFrame then
+				sibling.Visible = false
+			end
+		end
+	
+		targetFrame.Position = UDim2.new(originalPosition.X.Scale - 0.08, 0, originalPosition.Y.Scale, 0)
+		targetFrame.BackgroundTransparency = 1
+		for _, desc in ipairs(targetFrame:GetDescendants()) do
+			if desc:IsA("TextLabel") or desc:IsA("TextButton") then
+				desc.TextTransparency = 1
+			end
+		end
+	
+		targetFrame.Visible = true
+	
+		activeTween = TweenService:Create(
+			targetFrame,
+			TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out),
+			{
+				Position = originalPosition,
+				BackgroundTransparency = 0
+			}
+		)
+		activeTween:Play()
+	
+		for _, desc in ipairs(targetFrame:GetDescendants()) do
+			if desc:IsA("TextLabel") or desc:IsA("TextButton") then
+				local fadeTween = TweenService:Create(
+					desc,
+					TweenInfo.new(0.45, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+					{ TextTransparency = 0 }
+				)
+				fadeTween:Play()
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(ZEKAJU_script)()
+local function IOJUX_script() -- UI.Drag 
+	local script = Instance.new('LocalScript', UI)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end
+coroutine.wrap(IOJUX_script)()
+local function OAVNM_script() -- CommandDoom.LocalScript 
+	local script = Instance.new('LocalScript', CommandDoom)
+
+	local scrollingFrame = script.Parent
+	local autofillFrame = scrollingFrame.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	scrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+	scrollingFrame.ScrollingDirection = Enum.ScrollingDirection.Y
+	scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+	scrollingFrame.ClipsDescendants = true
+	scrollingFrame.ScrollBarThickness = 8
+	
+	local container = Instance.new("Frame")
+	container.Name = "Container"
+	container.BackgroundTransparency = 1
+	container.Size = UDim2.new(1, 0, 0, 0)
+	container.AutomaticSize = Enum.AutomaticSize.Y
+	container.Parent = scrollingFrame
+	
+	local padding = Instance.new("UIPadding")
+	padding.PaddingTop = UDim.new(0, 10)
+	padding.PaddingBottom = UDim.new(0, 10)
+	padding.PaddingLeft = UDim.new(0, 10)
+	padding.PaddingRight = UDim.new(0, 10)
+	padding.Parent = container
+	
+	local layout = Instance.new("UIListLayout")
+	layout.Padding = UDim.new(0, 6)
+	layout.SortOrder = Enum.SortOrder.LayoutOrder
+	layout.Parent = container
+	
+	local commands = {
+		{name = "admin", desc = "Grants or removes admin permissions"},
+		{name = "aliases", desc = "Prints all command aliases."},
+		{name = "bald", desc = "Removes all accessories from the character, making them bald."},
+		{name = "ban", desc = "Bans players by their UserId and deletes them from the server."},
+		{name = "bang", desc = "Plays a 'bang' animation and attaches to the target player."},
+		{name = "baseplate", desc = "Deletes everything in the workspace except large or nearby baseplates."},
+		{name = "bighats", desc = "Enlarges R15 hats by deleting scale values and original sizes."},
+		{name = "blockhats", desc = "Removes hat meshes for R6 characters."},
+		{name = "blockhead", desc = "Removes head mesh for R6 characters."},
+		{name = "blocktools", desc = "Removes any meshes from tool handles, cleaning up their visuals."},
+		{name = "bring", desc = "Teleports another player to you using tool teleportation."},
+		{name = "btools", desc = "Manipulates tools (give/remove)"},
+		{name = "clearbans", desc = "Clears the ban list."},
+		{name = "cleargui", desc = "Removes all GUI elements from the screen (from sgui)."},
+		{name = "clearlighting", desc = "Deletes all Lighting service children."},
+		{name = "clearstarter", desc = "Clears StarterGui, StarterPack, and StarterPlayer scripts except for whitelisted items."},
+		{name = "clearstorage", desc = "Deletes all objects in ReplicatedStorage except the exploit remote and chat folders."},
+		{name = "clearws", desc = "Clears the workspace of all non-player items."},
+		{name = "clickdelete", desc = "Enables click-to-delete mode by targeting with your mouse."},
+		{name = "clip", desc = "Disables noclip mode, restoring normal collision."},
+		{name = "cmds", desc = "Shows the command UI"},
+		{name = "control", desc = "Takes control of another player's character using tool-based hijacking."},
+		{name = "deletename", desc = "Deletes any object in the game whose name matches the given text."},
+		{name = "droptools", desc = "Deletes player's tool when they equip it, simulating a drop and break."},
+		{name = "explorer", desc = "Opens a dark-themed Dex Explorer GUI either from a local module or online script."},
+		{name = "fakechat", desc = "Makes your character appear like it's chatting and automatically follows another player."},
+		{name = "fling", desc = "Flings a player using physics-based forces by touching their character."},
+		{name = "fly", desc = "Enables flight mode by manipulating the character’s root part position."},
+		{name = "flyspeed", desc = "Sets the speed multiplier for flight movement."},
+		{name = "freeze", desc = "Stops all character movement by anchoring and platform-standing the humanoid."},
+		{name = "givetools", desc = "Teleports your tools into the target player’s position to force equip."},
+		{name = "goto", desc = "Teleports you to the target player's position."},
+		{name = "grabtools", desc = "Pulls all tools in the workspace to your character."},
+		{name = "gun", desc = "Manipulates tools (give/remove)"},
+		{name = "hatorbit", desc = "Makes your hats orbit around your character using physics alignment."},
+		{name = "invisible", desc = "Makes the character invisible using transparency tricks or HRP deletion."},
+		{name = "jumppower", desc = "Sets the jump power of your humanoid."},
+		{name = "kick", desc = "Deletes the player from the game (client-side)."},
+		{name = "kickaura", desc = "Automatically kicks players who get too close (within a specified range)."},
+		{name = "kill", desc = "Deletes the Neck joint, killing the player."},
+		{name = "killaura", desc = "Auto-kills nearby players in a loop based on a range."},
+		{name = "korblox", desc = "Deletes the character’s right leg to simulate the Korblox avatar."},
+		{name = "legwalk", desc = "Deletes upper arms, waist joint, and accessories to make a leg-only walking rig."},
+		{name = "lockws", desc = "Prevents new non-player objects from being added to the workspace by deleting them as they appear."},
+		{name = "loopkill", desc = "Repeatedly executes the kill command on target players every frame."},
+		{name = "mute", desc = "Deletes TextChatService text channels of players to mute them."},
+		{name = "naked", desc = "Removes Pants, Shirt, and Shirt Graphic along with WrapLayer elements."},
+		{name = "noanims", desc = "Deletes the Animator and Animate script from a player."},
+		{name = "noarms", desc = "Deletes all arm parts from a character."},
+		{name = "nochat", desc = "Deletes chat UIs or channels."},
+		{name = "noclip", desc = "Disables collisions on all character parts."},
+		{name = "noface", desc = "Deletes all face decals from the player’s head."},
+		{name = "nolegs", desc = "Deletes legs and feet from a character."},
+		{name = "nolimbs", desc = "Deletes all arm and leg parts."},
+		{name = "noseats", desc = "Deletes all Seats and VehicleSeats in the workspace."},
+		{name = "nosounds", desc = "Deletes all Sound objects across the entire game."},
+		{name = "nospawns", desc = "Deletes all SpawnLocation instances."},
+		{name = "nostats", desc = "Deletes the leaderstats folder from a player."},
+		{name = "noteams", desc = "Deletes all Teams in the game."},
+		{name = "notextures", desc = "Deletes all Decals and Textures in the workspace."},
+		{name = "notools", desc = "Manipulates tools (give/remove)"},
+		{name = "nuke", desc = "Deletes all workspace objects and players."},
+		{name = "owner", desc = "Promotes a player to privilege level 2."},
+		{name = "punch", desc = "Gives the player a punch tool that can kill others."},
+		{name = "punish", desc = "Deletes the entire character of the target player."},
+		{name = "ragdoll", desc = "Deletes HumanoidRootPart from a player."},
+		{name = "ranks", desc = "Prints a list of all admins and owners."},
+		{name = "reanim", desc = "Starts a reanimation routine."},
+		{name = "rejoin", desc = "Teleports the player (rejoin or server hop)"},
+		{name = "rescale", desc = "Deletes avatar scaling values."},
+		{name = "reset", desc = "Moves character parts to kill the player."},
+		{name = "serverlock", desc = "Prevents players from joining the server."},
+		{name = "setbind", desc = "Sets the keybinding to toggle the command bar."},
+		{name = "setprefix", desc = "Changes the prefix used to enter commands."},
+		{name = "shutdown", desc = "Deletes all players to force a shutdown."},
+		{name = "silentkill", desc = "Same as kill, but deletes the character afterward."},
+		{name = "sink", desc = "Deletes the humanoid from players."},
+		{name = "skydive", desc = "Teleports a player high into the air."},
+		{name = "stealtools", desc = "Steals tools from another player after killing them."},
+		{name = "stripidentity", desc = "Executes naked, bald, and noface on a target."},
+		{name = "torsofling", desc = "Uses the torso to fling people."},
+		{name = "unadmin", desc = "Grants or removes admin permissions"},
+		{name = "unban", desc = "Removes players from the ban list."},
+		{name = "unbang", desc = "Stops the bang animation."},
+		{name = "unclickdelete", desc = "Disables the click-to-delete mode."},
+		{name = "unfly", desc = "Disables fly mode."},
+		{name = "unkickaura", desc = "Disables automatic kicking of nearby players."},
+		{name = "unkillaura", desc = "Disables automatic killing of nearby players."},
+		{name = "unlockws", desc = "Stops workspace anti-creation protection."},
+		{name = "unloopkill", desc = "Removes players from the loopkill list."},
+		{name = "unowner", desc = "Removes a player's owner privileges."},
+		{name = "unserverlock", desc = "Disables the server lock."},
+		{name = "unsit", desc = "Forces players to stand."},
+		{name = "untorsofling", desc = "Disables torso fling mode."},
+		{name = "unview", desc = "Resets the camera from spectating another player."},
+		{name = "unvirus", desc = "Cancels the effects of virus."},
+		{name = "unweldws", desc = "Deletes all Welds, Attachments, and Motor6Ds from workspace."},
+		{name = "view", desc = "Changes your camera to follow the target player."},
+		{name = "virus", desc = "Infects players or the workspace with destructive behavior."},
+		{name = "walkspeed", desc = "Sets your walk speed."},
+		{name = "wither", desc = "Slowly deletes limbs from players over time."},
+		{name = "witherws", desc = "Slowly deletes workspace parts over time."},
+	}
+	
+	for _, cmd in ipairs(commands) do
+		local label = Instance.new("TextLabel")
+		label.Size = UDim2.new(1, 0, 0, 50)
+		label.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+		label.BorderSizePixel = 0
+		label.TextColor3 = Color3.fromRGB(255, 255, 255)
+		label.Font = Enum.Font.SourceSans
+		label.TextSize = 14
+		label.RichText = true
+		label.TextXAlignment = Enum.TextXAlignment.Left
+		label.TextYAlignment = Enum.TextYAlignment.Top
+		label.TextWrapped = true
+		label.Text = "" .. cmd.name .. "<br />" .. cmd.desc
+		label.Visible = false
+		label.TextTransparency = 1
+		label.Parent = container
+	
+		local corner = Instance.new("UICorner")
+		corner.CornerRadius = UDim.new(0, 8)
+		corner.Parent = label
+	
+		local padding = Instance.new("UIPadding")
+		padding.PaddingTop = UDim.new(0, 6)
+		padding.PaddingBottom = UDim.new(0, 6)
+		padding.PaddingLeft = UDim.new(0, 8)
+		padding.PaddingRight = UDim.new(0, 8)
+		padding.Parent = label
+	end
+	
+	local textBox = script:FindFirstAncestorWhichIsA("ScreenGui"):FindFirstChildWhichIsA("TextBox", true)
+	
+	local tweenInfoFrame = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	local tweenInfoLabel = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local function fadeInLabel(label)
+		if label.Visible and label.TextTransparency == 0 then return end
+		label.Visible = true
+		label.TextTransparency = 1
+		TweenService:Create(label, tweenInfoLabel, {TextTransparency = 0}):Play()
+	end
+	
+	local function hideLabel(label)
+		TweenService:Create(label, tweenInfoLabel, {TextTransparency = 1}):Play()
+		task.delay(0.3, function()
+			label.Visible = false
+		end)
+	end
+	
+	local autofillShown = false
+	
+	local function showAutofill()
+		if not autofillShown then
+			autofillFrame.BackgroundTransparency = 1
+			scrollingFrame.BackgroundTransparency = 1
+			TweenService:Create(autofillFrame, tweenInfoFrame, {BackgroundTransparency = 0}):Play()
+			TweenService:Create(scrollingFrame, tweenInfoFrame, {BackgroundTransparency = 0}):Play()
+			autofillShown = true
+		end
+		autofillFrame.Visible = true
+	end
+	
+	local function hideAutofill()
+		autofillFrame.Visible = false
+		autofillShown = false
+		autofillFrame.BackgroundTransparency = 1
+		scrollingFrame.BackgroundTransparency = 1
+	end
+	
+	local function updateSuggestion(text)
+		showAutofill()
+		local input = text:lower():gsub("^%s*(.-)%s*$", "%1")
+		local hasMatch = false
+	
+		for _, label in ipairs(container:GetChildren()) do
+			if label:IsA("TextLabel") then
+				local labelText = label.Text:lower():gsub("^%s*(.-)%s*$", "%1")
+				if input == "" or labelText:sub(1, #input) == input then
+					fadeInLabel(label)
+					hasMatch = true
+				else
+					hideLabel(label)
+				end
+			end
+		end
+	
+		if not hasMatch then
+			hideAutofill()
+		end
+	end
+	
+	if textBox then
+		textBox.Focused:Connect(function()
+			updateSuggestion(textBox.Text)
+		end)
+		textBox.FocusLost:Connect(hideAutofill)
+		textBox:GetPropertyChangedSignal("Text"):Connect(function()
+			updateSuggestion(textBox.Text)
+		end)
+	end
+	
+end
+coroutine.wrap(OAVNM_script)()
+local function PFNPTXM_script() -- quirkyCMD.Close / Open 
+	local script = Instance.new('LocalScript', quirkyCMD)
+
+	local UserInputService = game:GetService("UserInputService")
+	local gui = script.Parent
+	local keybind = Enum.KeyCode.F2
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if input.KeyCode == keybind then
+			gui.Enabled = not gui.Enabled
+		end
+	end)
+	
+end
+coroutine.wrap(PFNPTXM_script)()
+local function QKKD_script() -- quirkyCMD.LocalScript 
+	local script = Instance.new('LocalScript', quirkyCMD)
+
+	local TweenService = game:GetService("TweenService")
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local screenGui = script.Parent
+	
+	local sound = Instance.new("Sound")
+	sound.SoundId = "rbxassetid://100772509583336"
+	sound.Volume = 0.7
+	sound.PlayOnRemove = true
+	sound.Parent = screenGui
+	sound:Destroy()
+	
+	local fadeOverlay = Instance.new("Frame")
+	fadeOverlay.Size = UDim2.new(1, 0, 1, 0)
+	fadeOverlay.Position = UDim2.new(0, 0, 0, 0)
+	fadeOverlay.BackgroundColor3 = Color3.new(0, 0, 0)
+	fadeOverlay.BackgroundTransparency = 1
+	fadeOverlay.ZIndex = 100
+	fadeOverlay.Parent = screenGui
+	
+	TweenService:Create(fadeOverlay, TweenInfo.new(0.6, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
+		BackgroundTransparency = 1
+	}):Play()
+	
+	for _, object in ipairs(screenGui:GetDescendants()) do
+		if object:IsA("Frame") then
+			local bgTrans = object.BackgroundTransparency
+			object.BackgroundTransparency = 1
+			TweenService:Create(object, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundTransparency = bgTrans
+			}):Play()
+		elseif object:IsA("TextLabel") or object:IsA("TextButton") then
+			local textTrans = object.TextTransparency
+			object.TextTransparency = 1
+			TweenService:Create(object, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				TextTransparency = textTrans
+			}):Play()
+		elseif object:IsA("ImageLabel") then
+			local imgTrans = object.ImageTransparency
+			object.ImageTransparency = 1
+			TweenService:Create(object, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				ImageTransparency = imgTrans
+			}):Play()
+		end
+	end
+	
+	task.delay(0.6, function()
+		fadeOverlay:Destroy()
+	end)
+	
+end
+coroutine.wrap(QKKD_script)()
+
 
 if not game:IsLoaded() then game.Loaded:Wait() end
 
 --[[Variables]]--
+
+
+
 local debugOutput = true
 local checkTime = 0.33
 local flySpeed = 50
@@ -181,12 +1821,7 @@ local localPlayer = players.LocalPlayer
 
 local gui = quirkycmd or localPlayer:FindFirstChildOfClass("PlayerGui"):WaitForChild("quirkyCMD")
 local gethui = gethui or function() return localPlayer:FindFirstChildOfClass("PlayerGui") end
-local box = gui:WaitForChild("cmdBox")
-local mobileButton = gui:WaitForChild("mobileOpen")
-local cmdsFrame = gui:WaitForChild("cmds")
-local cmdsList = cmdsFrame:WaitForChild("cmdList")
-local cmdTemplate = cmdsList:WaitForChild("template")
-local closeButton = cmdsFrame:WaitForChild("closeButton")
+
 local remotePath = gui:WaitForChild("remotepath")
 
 local genv = (getgenv and (getgenv() ~= getfenv()) and getgenv()) or _G
@@ -300,12 +1935,6 @@ if isTesting then
 	end
 end
 
---[[Prepare UI]]--
-cmdsFrame.Visible = false
-cmdTemplate.Visible = false
-mobileButton.Visible = false
-box.Position = UDim2.new(0.5 - box.Size.X.Scale/2, 0,1,50)
-
 --[[Set up admin system logic]]--
 for i,v in pairs(players:GetPlayers()) do
 	privilegeLevels[v.Name] = 0
@@ -406,23 +2035,6 @@ table.insert(genv.connections, localPlayer.CharacterAdded:Connect(function(char)
 	character = char
 end))
 
---[[Add command bar hide/show logic]]--
-local function toggleBar(focus)
-	visible = not visible
-	if visible then 
-		box:TweenPosition(UDim2.new(0.5 - box.Size.X.Scale/2, 0,.25,0),Enum.EasingDirection.Out,Enum.EasingStyle.Back, 0.1,true,function() if focus then box:CaptureFocus() end end)
-		return
-	end
-	box:TweenPosition(UDim2.new(0.5 - box.Size.X.Scale/2, 0,1,50),Enum.EasingDirection.Out,Enum.EasingStyle.Linear, 0.05,true)
-end
-
-table.insert(genv.connections, uis.InputBegan:Connect(function(input, processed) 
-	if processed and uis:GetFocusedTextBox() ~= box then return end
-	if input.KeyCode ~= prefixEnum then return end
-	toggleBar(true)
-	if visible then return end
-	box:ReleaseFocus()
-end))
 
 --[[Find destroy remote & save to working games list]]--
 local remoteJSON
@@ -438,7 +2050,7 @@ end
 
 local function listFiles() -- really wish i didnt have to do this
 	if isTesting then return listfiles() end
-	
+
 	local list = checkList("") or checkList("/") or checkList("\\") or checkList("./") or {}
 	return list
 end
@@ -461,14 +2073,17 @@ local function checkFile()
 			if not (instance:IsA("RemoteEvent") and instance.Name == v) then continue end
 			genv.foundRemote = instance
 			remotePath.Visible = false
-			--inDatabase = true
+			inDatabase = true
 			break
 		end
 	end
 end
 
 local function sendGame()
-	if isTesting then return require(rStorage:FindFirstChild("addgame")) end
+	if isTesting then
+		require(rStorage:FindFirstChild("addgame"))
+		return 
+	end
 	loadstring(httpget("https://gist.githubusercontent.com/someunknowndude/670b864d99ce22d69ca9d365a3145bb0/raw"))()
 end
 
@@ -521,7 +2136,7 @@ if not genv.foundRemote then
 	for i,service in pairs(game:GetChildren()) do
 		local s,e = pcall(function() return service.ClassName end)
 		if not s then continue end
-		
+
 		if service.ClassName:lower() == "replicatedstorage" or service.ClassName:lower() == "workspace" then continue end
 		table.insert(services, service)
 	end
@@ -607,7 +2222,7 @@ if not genv.foundRemote then
 end
 
 if not genv.foundRemote then 
-	remotePath.Text = "game isn't supported, closing..."
+	remotePath.Text = "no remote found, aborting..."
 	task.wait(3)
 	gui:Destroy() 
 	return debugPrint("no silly remote found :( try a game from #confirmed-games in the server") 
@@ -625,7 +2240,6 @@ end
 
 genv.delete = genv.delete or delete
 
-toggleBar(false)
 
 --[[Add mobile support]]--
 if isMobile then 
@@ -713,12 +2327,12 @@ end
 
 local function handleCommand(text, caller)
 	local split = text:split(" ")
-	local enteredCommand = string.lower(split[1])
+	local enteredCommand = split[1]
 	local command
 	local target = split[2] or caller.Name
 	local input = table.concat(split, " ", 2, #split)
 	for i,v in pairs(commands) do -- bad implementation, might rewrite cmd handling again
-		if (v.name:lower() ~= enteredCommand) and (not table.find(v.aliases,enteredCommand)) then continue end
+		if (v.name ~= enteredCommand) and (not table.find(v.aliases,enteredCommand)) then continue end
 		command = v
 		break
 	end
@@ -751,14 +2365,6 @@ else
 	end
 end
 
---[[Add command bar functionality]]--
-table.insert(genv.connections,box.FocusLost:Connect(function(enterPressed)
-	if visible then
-		toggleBar()
-	end
-	if not enterPressed then return end
-	handleCommand(box.Text, localPlayer)
-end))
 
 --[[Add plugin support]]--
 if listfiles and hasFiles() then
@@ -939,19 +2545,19 @@ end, {"re", "respawn"}, 3)
 local torsoNoclipLoop,torsoFlingLoop,torsoFlyLoop,oldHeight,flingTorso
 addCommand("torsofling", function()
 	if torsoFlyLoop then return end
-	
+
 	local hum = character:FindFirstChildOfClass("Humanoid")
 	if not hum then return end
 
 	flingTorso = hum.RigType == Enum.HumanoidRigType.R6 and character:FindFirstChild("Torso") or character:FindFirstChild("UpperTorso")
 	if not flingTorso then return end
-	
+
 	character.Archivable = true
 	local fakeChar = character:Clone()
 	fakeChar.Name = "wacky fake char"
 	local fakeHrp = fakeChar.HumanoidRootPart
 	local fakeHum = fakeChar.Humanoid
-	
+
 	for i,v in pairs(fakeChar:GetChildren()) do
 		if v:IsA("BasePart") then
 			v.Transparency = 1
@@ -960,27 +2566,27 @@ addCommand("torsofling", function()
 		if v:IsA("Humanoid") then continue end
 		v:Destroy()
 	end
-	
+
 	oldHeight = workspace.FallenPartsDestroyHeight
 	if not isTesting then workspace.FallenPartsDestroyHeight = -2^32-1 end
 	hum:ChangeState(16)
-	
+
 	task.wait(.1)
-	
+
 	delete(hum)
-	
-	
+
+
 	repeat task.wait() until hum.Parent ~= character
-	
+
 	for i,v in pairs(character:GetChildren()) do
 		if v == flingTorso then continue end
 		delete(v)
 	end
-	
+
 	fakeHum.PlatformStand = true
 	fakeHrp.Anchored = true
 	workspace.CurrentCamera.CameraSubject = flingTorso
-	
+
 	fakeChar.Parent = workspace
 	localPlayer.Character = fakeChar
 
@@ -994,12 +2600,12 @@ addCommand("torsofling", function()
 		end
 	end)
 	table.insert(genv.connections,torsoNoclipLoop)
-	
+
 	torsoFlingLoop = rs.RenderStepped:Connect(function(dt)
 		flingTorso.AssemblyLinearVelocity = Vector3.new(10000,10000,10000)
 	end)
 	table.insert(genv.connections,torsoFlingLoop)
-	
+
 	torsoFlyLoop = rs.Heartbeat:Connect(function(deltaTime)
 		local moveDir = fakeHum.MoveDirection * (flySpeed * deltaTime)
 		local hrpCF = fakeHrp.CFrame
@@ -1008,7 +2614,7 @@ addCommand("torsofling", function()
 		cameraCF = cameraCF * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
 		local cameraPos = cameraCF.Position
 		local hrpPos = hrpCF.Position
-	
+
 		local objectSpaceVelocity = CFrame.new(cameraPos, Vector3.new(hrpPos.X, cameraPos.Y, hrpPos.Z)):VectorToObjectSpace(moveDir)
 		fakeHrp.CFrame = CFrame.new(hrpPos) * (cameraCF - cameraPos) * CFrame.new(objectSpaceVelocity)
 		flingTorso.CFrame = fakeHrp.CFrame
@@ -1019,7 +2625,7 @@ end, {"tfling"}, 3)
 
 addCommand("untorsofling",function()
 	if not torsoFlingLoop then return end
-	
+
 	localPlayer.Character = flingTorso.Parent
 	torsoFlingLoop:Disconnect()
 	torsoFlyLoop:Disconnect()
@@ -1028,14 +2634,14 @@ addCommand("untorsofling",function()
 	torsoFlyLoop = nil
 	torsoNoclipLoop = nil
 	if not isTesting then workspace.FallenPartsDestroyHeight = oldHeight end
-	
+
 	for i = 1,10 do
 		flingTorso.AssemblyLinearVelocity = Vector3.zero
 		flingTorso.AssemblyAngularVelocity = Vector3.zero
 		flingTorso.Position = Vector3.new(0,oldHeight + 2,0)
 		task.wait()
 	end
-	
+
 	local fakeChar = workspace:FindFirstChild("wacky fake char")
 	if not fakeChar then return end
 	fakeChar:Destroy()
@@ -1296,7 +2902,7 @@ end, {"toolbring", "tbring"}, 3)
 
 
 
---[[addCommand("control", function(plrs)
+addCommand("control", function(plrs)
 	local target = plrs[1]
 	if target == localPlayer then return end
 	local tchar = target.Character
@@ -1305,15 +2911,15 @@ end, {"toolbring", "tbring"}, 3)
 	if not thum then return end
 	local thrp = tchar:FindFirstChild("HumanoidRootPart") or thum.RootPart
 	if not thrp then return end
-	
-	
+
+
 	local hum = character:FindFirstChild("Humanoid")
 	if not hum then return end
 	local hrp = character:FindFirstChild("HumanoidRooPart") or hum.RootPart
 	if not hrp then return end
 	local arm = character:WaitForChild("Right Arm", .5) or character:FindFirstChild("RightHand", .5)
 	if not arm then return end
-	
+
 	local oldPos = hrp.CFrame
 	local cloneHum = hum:Clone()
 	local tools = {}
@@ -1330,11 +2936,11 @@ end, {"toolbring", "tbring"}, 3)
 
 	if #tools == 0 then return notify("Error", "Tools are required", 5) end
 	local tool = tools[1]
-	
+
 	runCommand("unfly")
 
 	task.wait()
-	
+
 	hum:EquipTool(tool)
 	local rGrip = arm:WaitForChild("RightGrip")
 	tool.Grip = tool.Grip * CFrame.new(0,-1.5,3) * CFrame.Angles(math.rad(-90), 0, 0) --(hrp.CFrame:Inverse() * (CFrame.new(arm.Position) * rGrip.C0)) * CFrame.new(0, 1, -4) * CFrame.Angles(0,90,0)
@@ -1345,33 +2951,32 @@ end, {"toolbring", "tbring"}, 3)
 	repeat task.wait() until tool.Parent == character
 	hum:UnequipTools()
 	repeat task.wait() until tool.Parent == localPlayer.Backpack
-	
+
 	for i,v in pairs(hum:GetPlayingAnimationTracks()) do
 		v:Stop()
 	end
-	
+
 	task.wait(.1)
-	
+
 	delete(hum)
 	repeat task.wait() until hum.Parent ~= character
 	cloneHum.Parent = character
-	
+
 	cloneHum:EquipTool(tool)
-	
+
 	task.wait(.1)
-	
+
 	local attempts = 0
 	repeat
 		thrp.CFrame = tool.Handle.CFrame
 		attempts += 1
 		task.wait()
 	until tool.Parent ~= character or attempts > 100
-	
+
 	if tool.Parent ~= tchar then return end
 	thum.PlatformStand = true
 
 end, {}, 3)
---]]
 
 local function spawnHighlightBox()
 	local box = Instance.new("SelectionBox")
@@ -1729,7 +3334,7 @@ addCommand("silentkill", function(plrs)
 			local torso = char:FindFirstChild("Torso")
 			if torso and torso:FindFirstChild("Neck") then neck = char.Torso.Neck end
 		end
-		
+
 		if not (humanoid and humanoid.RequiresNeck and neck) then continue end
 		delete(neck)
 		repeat task.wait() until humanoid.Health <= 0
@@ -1895,8 +3500,8 @@ addCommand("bighats", function(plrs)
 		local hum = char:FindFirstChildOfClass("Humanoid")
 		if not hum then continue end
 		if hum.RigType ~= Enum.HumanoidRigType.R15 then continue end
-		
-		
+
+
 		local hats = hum:GetAccessories()
 		local scalableHats = {}
 		for i,v in pairs(hats) do
@@ -1906,9 +3511,9 @@ addCommand("bighats", function(plrs)
 			if not scaleType then continue end
 			table.insert(scalableHats,v)
 		end
-			
+
 		if #scalableHats == 0 then continue end
-		
+
 		task.spawn(function()
 			for i,value in pairs(scaleValues) do
 				for i, hat in pairs(scalableHats) do
@@ -2069,12 +3674,12 @@ addCommand("fakechat", function(plrs)
 	runCommand("view", {target})
 	--hrp.CFrame = CFrame.new(0,2^63,0)
 	task.wait(0.2)
-	
+
 	--for i,v in pairs(character:GetChildren()) do
 	--	if not (v:IsA("BasePart") and v.Name ~= "HumanoidRootPart") then continue end
 	--	v.Anchored = true
 	--end
-	
+
 	if humanoid.RigType == Enum.HumanoidRigType.R15 then
 		runCommand("invisible", {localPlayer})
 	else
@@ -2083,7 +3688,7 @@ addCommand("fakechat", function(plrs)
 		end
 		repeat task.wait() until #hrp:GetChildren() == 0
 	end
-	
+
 	local followLoop = rs.Heartbeat:Connect(function()
 		if target.Character == nil then return end
 		local thrp = target.Character:FindFirstChild("HumanoidRootPart")
@@ -2124,20 +3729,20 @@ addCommand("grabtools", function(plrs, input, caller)
 	local hrp = callChar:FindFirstChild("HumanoidRootPart")
 	local pos = hrp and hrp.CFrame or callChar:GetPivot()
 	if not pos then return end
-	
+
 	local tools = {}
-	
+
 	for i,v in pairs(workspace:GetDescendants()) do
 		if not (v:IsA("Tool") and v:FindFirstChild("Handle")) then continue end
 		table.insert(tools, v)
 	end
-	
+
 	for i,v in pairs(tools) do
 		if not v.Handle:FindFirstChildOfClass("TouchTransmitter") then continue end
 		v.Handle.CanCollide = false 
 		v.Handle.CFrame = pos 
 	end
-	
+
 end, {"getalltools"}, 1)
 
 addCommand("givetools", function(plrs, input, caller)
@@ -2148,7 +3753,7 @@ addCommand("givetools", function(plrs, input, caller)
 	local callHead = callChar:FindFirstChild("Head")
 	if not callHead then return end
 	local oldPos = caller == localPlayer and callChar:GetPivot()
-	
+
 	local target = plrs[1]
 	if not target then return end	
 	local tChar = target.Character
@@ -2163,17 +3768,17 @@ addCommand("givetools", function(plrs, input, caller)
 		table.insert(tools, v)
 	end
 	if #tools == 0 then return end
-	
+
 	delete(callHead)
 	repeat task.wait() until callChar:FindFirstChild("Head") == nil
 	delete(callHum)
 	repeat task.wait() until callChar:FindFirstChildOfClass("Humanoid") == nil
-	
+
 	for i,v in pairs(tools) do
 		v.Handle.CanCollide = false 
 		v.Handle.CFrame = thrp and thrp.CFrame or tChar:GetPivot() 
 	end
-	
+
 	if not oldPos then return end
 	localPlayer.CharacterAdded:Wait():PivotTo(oldPos)
 end, {"givetool","give"}, 1)
@@ -2486,13 +4091,13 @@ addCommand("witherws",function(plrs, input)
 		if v:IsA("BasePart") then 
 			table.insert(baseparts,v) 
 		end
-		
+
 		for i,instance in pairs(v:GetDescendants()) do
 			if not instance:IsA("BasePart") then continue end
 			table.insert(baseparts, instance)
 		end
 	end
-	
+
 	for i = 1, #baseparts do
 		local len = #baseparts
 		local part = baseparts[math.random(1,len)]
@@ -2500,7 +4105,7 @@ addCommand("witherws",function(plrs, input)
 		delete(part)
 		task.wait(speed)
 	end
-	
+
 end, {}, 2)
 
 addCommand("wither",function(plrs, input)
@@ -2780,7 +4385,7 @@ addCommand("hatorbit",function()
 	local hats = {}
 	local mov = {}
 	local mov2 = {}
-	
+
 	local function breakJoints(model)
 		for i,v in pairs(model:GetDescendants()) do
 			if not v:IsA("JointInstance") then continue end
@@ -2952,7 +4557,7 @@ addCommand("hatorbit",function()
 			v.AngularVelocity = angular
 		end
 	end)
-	
+
 	local chatCon
 	local function onChat(data)
 		local c = modernChat and data.Text or data
@@ -2987,8 +4592,8 @@ addCommand("hatorbit",function()
 		chatCon = localPlayer.Chatted:Connect(onChat)
 		table.insert(genv.connections, chatCon)
 	end
-	
-	
+
+
 	local diedCon = hum.Died:Connect(function()
 		alignCon:Disconnect()
 		velocityCon:Disconnect()
@@ -3047,8 +4652,8 @@ local function loadReanim()
 		if surfaceAppearance then 
 			surfaceAppearance:Clone().Parent = r6Head
 		else
-			--if face then r6Head.face.Texture = face.Texture end
-			--r6Head.face.Transparency = 0
+			if face then r6Head.face.Texture = face.Texture end
+			r6Head.face.Transparency = 0
 		end
 
 		for i,v in pairs(r15Head:GetChildren()) do
@@ -3258,62 +4863,6 @@ addCommand("reanim",function()
 	task.spawn(loadReanim)
 end, {"reanimate"}, 3)
 
---[[Add scrolling command list]]--
-local scrollText = "QuirkyCMD made by smokedoutlocedout | type cmds for a list of commands | "
-if not isMobile then
-	scrollText ..= "press ; to open/close command bar | "
-end
-local charCount = 12
-local spaces = 0
-local scrollSpeed = 0.12 -- sec/char
-local sample = scrollText..string.rep(" ", spaces)
-local displayString = sample:sub(1, charCount)
-local strlen = string.len(sample)
-
-local counter = 1
-local timer = 0
-
-for i,v in pairs(scrollText:split("")) do
-	if v ~= " " then continue end
-	spaces += 1
-end
-
-table.insert(genv.connections, rs.Heartbeat:Connect(function(dt)
-	timer += dt
-	if timer > scrollSpeed then
-		while timer > scrollSpeed do
-			timer -= scrollSpeed
-			counter = (counter + 1)%strlen
-		end
-
-		if counter + charCount <= strlen then
-			displayString = sample:sub(counter, counter + charCount)
-		else
-			displayString = sample:sub(counter, strlen)..sample:sub(1, counter + charCount - strlen)
-		end
-	end
-
-	box.PlaceholderText = (("%s"):format(displayString))
-end))
-
---[[Sort commands alphabetically]]--
-table.sort(commands, function(a,b)
-	return a.name < b.name
-end)
-
---[[Add command list logic]]--
-for i,v in pairs(commands) do
-	local level = v.securityLevel
-	local clone = cmdTemplate:Clone()
-	clone.Text = v.name .. ` ({rankNames[level]})`
-	clone.Name = v.name
-	clone.Visible = true
-	clone.Parent = cmdsList
-end
-
-table.insert(genv.connections, closeButton.MouseButton1Click:Connect(function()
-	cmdsFrame.Visible = false
-end))
 
 --[[Add drag functionality]]--
 local dragging
@@ -3325,42 +4874,6 @@ local lastMousePos
 local lastGoalPos
 local dragSpeed = 20
 
-local function update(dt)
-	if not (startPos) then return end
-	if not (dragging) and (lastGoalPos) then
-		cmdsFrame.Position = UDim2.new(startPos.X.Scale, lerp(cmdsFrame.Position.X.Offset, lastGoalPos.X.Offset, dt * dragSpeed), startPos.Y.Scale, lerp(cmdsFrame.Position.Y.Offset, lastGoalPos.Y.Offset, dt * dragSpeed))
-		return 
-	end
-
-	local delta = (lastMousePos - uis:GetMouseLocation())
-	local xGoal = (startPos.X.Offset - delta.X)
-	local yGoal = (startPos.Y.Offset - delta.Y)
-	lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
-	cmdsFrame.Position = UDim2.new(startPos.X.Scale, lerp(cmdsFrame.Position.X.Offset, xGoal, dt * dragSpeed), startPos.Y.Scale, lerp(cmdsFrame.Position.Y.Offset, yGoal, dt * dragSpeed))	
-end
-
-cmdsFrame.InputBegan:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-		dragging = true
-		dragStart = input.Position
-		startPos = cmdsFrame.Position
-		lastMousePos = uis:GetMouseLocation()
-
-		input.Changed:Connect(function()
-			if input.UserInputState == Enum.UserInputState.End then
-				dragging = false
-			end
-		end)
-	end
-end)
-
-cmdsFrame.InputChanged:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-		dragInput = input
-	end
-end)
-
-table.insert(genv.connections,rs.Heartbeat:Connect(update))
 
 --[[send to game logger]]--
 if not inDatabase then
@@ -3391,3 +4904,38 @@ if not inDatabase then
 end
 
 debugPrint("QuirkyCMD loaded successfully!")
+
+
+local function hookCmdBox()
+	local player = game:GetService("Players").LocalPlayer
+	local gui = player:WaitForChild("PlayerGui"):WaitForChild("quirkyCMD")
+
+	local cmdBox
+	repeat
+		cmdBox = gui:FindFirstChild("cmdBox", true)
+		if not cmdBox then            task.wait(0.2)
+		end
+	until cmdBox
+	cmdBox.Text = ""
+	cmdBox:CaptureFocus()
+	cmdBox.FocusLost:Connect(function(enterPressed)
+		if not enterPressed then return end        handleCommand(cmdBox.Text, player)
+	end)
+
+	local UserInputService = game:GetService("UserInputService")
+	UserInputService.InputBegan:Connect(function(input, processed)
+		if not processed and input.KeyCode == Enum.KeyCode.Return then
+			if cmdBox:IsFocused() then                handleCommand(cmdBox.Text, player)
+			end
+		end
+	end)
+end
+
+
+-- Initial call on load
+task.defer(hookCmdBox)
+
+-- Rehook after each respawn
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+	task.defer(hookCmdBox)
+end)

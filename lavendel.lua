@@ -44,7 +44,7 @@ return {
         },
         PRA = {
             Name = "Polaria",
-            URL = "https://pastefy.app/agqEB2qs/raw"
+            URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/polaria.lua"
         }
     }
 }

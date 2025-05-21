@@ -45,6 +45,10 @@ return {
         {
             Name = "AnnaBypasser",
             URL = "https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua"
+        },
+        {
+            Name = "SCP-096 FE",
+            URL = "https://pastefy.app/M25RnnGm/raw"
         }
     }
 }

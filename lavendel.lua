@@ -55,8 +55,12 @@ return {
             URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/nouks-ui.luau"
         },
         {
-            Name = "SLS Hitbox Expander (Toggles: T, M, N)",
+            Name = "SLS Hitbox Expander (Binds: T, M, N)",
             URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/SLS-HBE.lua"
+        },
+        {
+            Name = "Basketball Legends",
+            URL = "https://raw.githubusercontent.com/vnausea/absence-mini/refs/heads/main/absencemini.lua"
         }
     }
 }

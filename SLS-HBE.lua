@@ -174,6 +174,12 @@ local function expandParts()
     end
 end
 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "HBE SLS";
+    Description = "Press T to expand parts, M to increase transparency and N to decrease transparency";
+    Duration = 6
+})
+
 UserInputService.InputBegan:Connect(function(input)
     if input.KeyCode == Enum.KeyCode.T then
         expandParts()

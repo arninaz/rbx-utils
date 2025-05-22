@@ -51,11 +51,7 @@ return {
             URL = "https://pastefy.app/M25RnnGm/raw"
         },
         {
-            Name = "Nouks UI (laggy)",
-            URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/nouks-ui.luau"
-        },
-        {
-            Name = "SLS Hitbox Expander (Binds: T, M, N)",
+            Name = "SLS Hitbox Expander",
             URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/SLS-HBE.lua"
         },
         {

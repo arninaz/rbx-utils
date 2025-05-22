@@ -51,7 +51,7 @@ return {
             URL = "https://pastefy.app/M25RnnGm/raw"
         },
         {
-            Name = "Nouks UI (laggy),
+            Name = "Nouks UI (laggy)",
             URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/nouks-ui.luau"
         },
         {

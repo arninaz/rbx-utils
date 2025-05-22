@@ -53,6 +53,10 @@ return {
         {
             Name = "Nouks UI (laggy),
             URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/nouks-ui.luau"
+        },
+        {
+            Name = "SLS Hitbox Expander (Toggles: T, M, N)",
+            URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/SLS-HBE.lua"
         }
     }
 }

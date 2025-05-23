@@ -1,5 +1,5 @@
 return {
-    Admins = {
+    Scripts = {
         {
             Name = "Infinite Yield",
             URL = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
@@ -19,9 +19,7 @@ return {
         {
             Name = "Rockys Admin",
             URL = "https://raw.githubusercontent.com/FilteringEnabled/FE/refs/heads/main/rockysadmin"
-        }
-    },
-    Scripts = {
+        },
         {
             Name = "HatHub",
             URL = "https://raw.githubusercontent.com/inkdupe/hat-scripts/refs/heads/main/updatedhathub.lua"

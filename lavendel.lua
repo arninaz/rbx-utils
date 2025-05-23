@@ -1,4 +1,4 @@
-{
+return {
     {
         Name = "SCP-096 FE",
         URL = "https://pastefy.app/M25RnnGm/raw"

@@ -21,7 +21,7 @@ return {
     },
     {
         Name = "SLS Hitbox Expander",
-        URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/SLS-HBE.lua"
+        URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/sls.lua"
     },
     {
         Name = "Nameless Admin",

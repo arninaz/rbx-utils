@@ -55,6 +55,10 @@ return {
         {
             Name = "Basketball Legends",
             URL = "https://raw.githubusercontent.com/vnausea/absence-mini/refs/heads/main/absencemini.lua"
+        },
+        {
+            Name = "Lumber Tycoon 2",
+            URL = "https://raw.githubusercontent.com/DevKron/Kron_Hub/refs/heads/main/lt2new"
         }
     }
 }

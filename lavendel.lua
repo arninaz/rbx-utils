@@ -9,7 +9,7 @@ return {
     },
     {
         Name = "Executor",
-        URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/lavendel-executor.luau"
+        URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/executor.lua"
     },
     {
         Name = "Lumber Tycoon 2",

@@ -62,5 +62,9 @@ return {
     {
         Name = "Quirky CMD",
         URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/qCMD.lua"
+    },
+    {
+        Name = "Nouks UI",
+        URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/nouks-ui.lua"
     }
 }

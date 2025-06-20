@@ -8,6 +8,10 @@ return {
         URL = "https://raw.githubusercontent.com/suji0n/Rice-Anti-Afk/main/Wind"
     },
     {
+        Name = "R15 To R6",
+        URL = ""
+    },
+    {
         Name = "Executor",
         URL = "https://raw.githubusercontent.com/veryz-sillyz-boyz/rbx-utils/refs/heads/main/executor.lua"
     },

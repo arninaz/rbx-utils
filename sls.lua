@@ -51,6 +51,8 @@ local function createAndStabilizePart(part, size, name, transparency)
     alignOrientation.RigidityEnabled = true
     alignOrientation.Parent = clone
 
+    local highlight = Instance.new("Highlight", clone)
+
     return clone
 end
 
